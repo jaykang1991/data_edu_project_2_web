@@ -29,11 +29,7 @@ public class UserController{
 	public String mainPage(Model model) {
 		return "main_page";
 	}
-	
-	@RequestMapping(value= {"/"})
-	public String mainPage(Model model) {
-		return "main_page";
-	}
+
 //	@RequestMapping(value="/hr/count")
 //	public String empCount(
 //		@RequestParam(value="deptid", required=false, defaultValue="0") int deptid, Model model){
