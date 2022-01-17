@@ -8,7 +8,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>소득정보-식량작물</title>
+    <title>농산물 가격 예측</title>
     <link href="<c:url value="/resources/img/fruit/apple.jpg" />" type = "image/png" sizes = "32x32" rel="icon">
     <link href="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet">
     <link href="<c:url value="/resources/css/main_side_1.css" />" rel="stylesheet">
@@ -80,7 +80,7 @@
             <li class="active"><a href="#">귀농 가이드<span style="font-size:16px;" class="pull-right hidden-xs glyphicon glyphicon-home"></span></a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">소득 정보 <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs glyphicon glyphicon-user"></span></a>
-              <ul class="dropdown-menu stay-open" role="menu">
+              <ul class="dropdown-menu" role="menu">
                 <li><a href="/myapp/profit_crop">식량작물</a></li>
                 <li class="divider"></li>
                 <li><a href="/myapp/profit_fruit">과수</a></li>
@@ -92,7 +92,7 @@
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">가격 정보 <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs glyphicon glyphicon-user"></span></a>
-              <ul class="dropdown-menu" role="menu">
+              <ul class="dropdown-menu stay-open" role="menu">
                 <li><a href="/myapp/predict">농산물 가격 예측</a></li>
                 <li class="divider"></li>
                 <li><a href="/myapp/world_price">세계 주요식품 가격현황</a></li>
@@ -117,34 +117,34 @@
 
       <section>
         <div class="container">
-            <div class="row"><h3>소득정보 - 식량작물</h3></div><br/><br/><br/><br/>
+            <div class="row"><h3>가격정보 - 농산물 가격 예측</h3></div><br/><br/><br/><br/>
             <div class="row">
                 <div class="col-sm-2 item_button">
-                    <h4 class="item_name">겉보리</h4>
+                    <h4 class="item_name">토마토</h4>
                     <button type="button" class="btn btn-default btn-circle btn-lg">
-                      <a href="#" data-toggle="modal" data-target="#squarespaceModal-barley">
-                        <img class="item" class="rounded-circle" alt="겉보리" src="<c:url value="/resources/img/crop/barley.jpg"/>" data-holder-rendered="true" width="150px"></a>
+                      <a href="#" data-toggle="modal" data-target="#squarespaceModal-tomato">
+                        <img class="item" class="rounded-circle" alt="토마토" src="<c:url value="/resources/img/vegi_fac/tomato.jpg"/>" data-holder-rendered="true" width="150px"></a>
                     </button>
                 </div>
                 <div class="col-sm-2 item_button">
-                  <h4 class="item_name">쌀보리</h4>
+                  <h4 class="item_name">수박</h4>
                   <button type="button" class="btn btn-default btn-circle btn-lg">
-                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-ricebarley">
-                      <img class="item" class="rounded-circle" alt="쌀보리" src="<c:url value="/resources/img/crop/ricebarley.PNG"/>" data-holder-rendered="true" width="150px"></a>
+                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-waterm">
+                      <img class="item" class="rounded-circle" alt="수박" src="<c:url value="/resources/img/vegi_fac/waterm.jpg"/>" data-holder-rendered="true" width="150px"></a>
                   </button>
                 </div>
                 <div class="col-sm-2 item_button">
-                  <h4 class="item_name">맥주보리</h4>
+                  <h4 class="item_name">파프리카</h4>
                   <button type="button" class="btn btn-default btn-circle btn-lg">
-                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-beerbarley">
-                      <img class="item" class="rounded-circle" alt="맥주보리" src="<c:url value="/resources/img/crop/beerbarley.PNG"/>" data-holder-rendered="true" width="150px"></a>
+                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-paprika">
+                      <img class="item" class="rounded-circle" alt="파프리카" src="<c:url value="/resources/img/vegi_fac/paprika.jpg"/>" data-holder-rendered="true" width="150px"></a>
                   </button>
                 </div>
                 <div class="col-sm-2 item_button">
-                  <h4 class="item_name">노지풋옥수수</h4>
+                  <h4 class="item_name">방울토마토</h4>
                   <button type="button" class="btn btn-default btn-circle btn-lg">
-                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-corn">
-                      <img class="item" class="rounded-circle" alt="노지풋옥수수" src="<c:url value="/resources/img/crop/corn.jpeg"/>" data-holder-rendered="true" width="150px"></a>
+                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-cherryt">
+                      <img class="item" class="rounded-circle" alt="방울토마토" src="<c:url value="/resources/img/vegi_fac/cherrytomato.jpg"/>" data-holder-rendered="true" width="150px"></a>
                   </button>
                 </div>
                 <div class="col-sm-2 item_button">
@@ -157,97 +157,67 @@
               </div>
                 <div class="row">
                 <div class="col-sm-2 item_button">
-                  <h4 class="item_name">봄감자</h4>
+                  <h4 class="item_name">감자</h4>
                   <button type="button" class="btn btn-default btn-circle btn-lg">
-                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-springpotato">
-                      <img class="item" class="rounded-circle" alt="봄감자" src="<c:url value="/resources/img/crop/potato.jpg"/>" data-holder-rendered="true" width="150px"></a>
+                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-potato">
+                      <img class="item" class="rounded-circle" alt="감자" src="<c:url value="/resources/img/crop/potato.jpg"/>" data-holder-rendered="true" width="150px"></a>
                   </button>
                 </div>
                 <div class="col-sm-2 item_button">
-                  <h4 class="item_name">가을감자</h4>
+                  <h4 class="item_name">사과</h4>
                   <button type="button" class="btn btn-default btn-circle btn-lg">
-                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-fallpotato">
-                      <img class="item" class="rounded-circle" alt="가을감자" src="<c:url value="/resources/img/crop/potato.jpg"/>" data-holder-rendered="true" width="150px"></a>
+                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-apple">
+                      <img class="item" class="rounded-circle" alt="사과" src="<c:url value="/resources/img/fruit/apple.jpg"/>" data-holder-rendered="true" width="150px"></a>
                   </button>
                 </div>
                 <div class="col-sm-2 item_button">
-                  <h4 class="item_name">참깨</h4>
+                  <h4 class="item_name">포도</h4>
                   <button type="button" class="btn btn-default btn-circle btn-lg">
-                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-sesame">
-                      <img class="item" class="rounded-circle" alt="참깨" src="<c:url value="/resources/img/crop/sesame.jpeg"/>" data-holder-rendered="true" width="150px"></a>
+                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-grape">
+                      <img class="item" class="rounded-circle" alt="포도" src="<c:url value="/resources/img/fruit/grape.jpg"/>" data-holder-rendered="true" width="150px"></a>
                   </button>
                 </div>
-                <div class="col-sm-2 item_button">
-                  <h4 class="item_name">인삼</h4>
-                  <button type="button" class="btn btn-default btn-circle btn-lg">
-                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-ginseng">
-                      <img class="item" class="rounded-circle" alt="인삼" src="<c:url value="/resources/img/crop/ginseng.jpg"/>" data-holder-rendered="true" width="150px"></a>
-                  </button>
-                </div>
-                <div class="col-sm-2 item_button">
-                  <h4 class="item_name">엽연초</h4>
-                  <button type="button" class="btn btn-default btn-circle btn-lg">
-                    <a href="#" data-toggle="modal" data-target="#squarespaceModal-tobacco">
-                      <img class="item" class="rounded-circle" alt="엽연초" src="<c:url value="/resources/img/crop/tobacco.PNG"/>" data-holder-rendered="true" width="150px"></a>
-                  </button>
-                  </div>
             </div>
         </div>
 
           <!-- modal -->
-        <div class="modal fade" id="squarespaceModal-barley" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal fade" id="squarespaceModal-tomato" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="container">
-                <div class="row title_profit">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h2>소득정보 - 겉보리 (0.1ha 기준)</h2></div><br/>
+                <div class="row title_profit"><h2>가격예측 - 토마토 (10kg)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_barley.PNG"/>" width="500px" height="500px">
+                    <img src="#" width="500px">
                 </div> </div>
             </div> </div>      
         </div>
-        <div class="modal fade" id="squarespaceModal-ricebarley" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal fade" id="squarespaceModal-waterm" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="container">
-                <div class="row title_profit">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h2>소득정보 - 쌀보리 (0.1ha 기준)</h2></div><br/>
+                <div class="row title_profit"><h2>가격예측 - 수박 (1개)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_ricebarley.PNG"/>" width="500px" height="500px">
+                    <img src="#" width="500px">
                 </div> </div>
             </div> </div>      
         </div>
-        <div class="modal fade" id="squarespaceModal-beerbarley" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal fade" id="squarespaceModal-paprika" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="container">
-                <div class="row title_profit">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h2>소득정보 - 맥주보리 (0.1ha 기준)</h2></div><br/>
+                <div class="row title_profit"><h2>가격예측 - 파프리카 (5kg)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_beerbarley.PNG"/>" width="500px" height="500px">
+                    <img src="#" width="500px">
                 </div> </div>
             </div> </div>      
         </div>
-        <div class="modal fade" id="squarespaceModal-corn" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal fade" id="squarespaceModal-cherryt" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="container">
-                <div class="row title_profit">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h2>소득정보 - 노지풋옥수수 (0.1ha 기준)</h2></div><br/>
+                <div class="row title_profit"><h2>가격예측 - 방울토마토 (5kg)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_corn.PNG"/>" width="500px" height="500px">
+                    <img src="#" width="500px">
                 </div> </div>
             </div> </div>      
         </div>
@@ -255,84 +225,39 @@
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="container">
-                <div class="row title_profit">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h2>소득정보 - 고구마 (0.1ha 기준)</h2></div><br/>
+                <div class="row title_profit"><h2>가격예측 - 밤 고구마 (10kg)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_sweetpotato.PNG"/>" width="500px" height="500px">
+                    <img src="#" width="500px">
                 </div> </div>
             </div> </div>      
         </div>
-        <div class="modal fade" id="squarespaceModal-springpotato" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal fade" id="squarespaceModal-potato" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="container">
-                <div class="row title_profit">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h2>소득정보 - 봄감자 (0.1ha 기준)</h2></div><br/>
+                <div class="row title_profit"><h2>가격예측 - 감자 (20kg)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_springpotato.PNG"/>" width="500px" height="500px">
+                    <img src="#" width="500px">
                 </div> </div>
             </div> </div>      
         </div>
-        <div class="modal fade" id="squarespaceModal-fallpotato" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal fade" id="squarespaceModal-apple" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="container">
-                <div class="row title_profit">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h2>소득정보 - 가을감자 (0.1ha 기준)</h2></div><br/>
+                <div class="row title_profit"><h2>가격예측 - 후지 사과 (10kg)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_fallpotato.PNG"/>" width="500px" height="500px">
+                    <img src="#" width="500px">
                 </div> </div>
             </div> </div>      
         </div>
-        <div class="modal fade" id="squarespaceModal-sesame" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
+        <div class="modal fade" id="squarespaceModal-grape" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
           <div class="modal-dialog">
             <div class="modal-content">
               <div class="container">
-                <div class="row title_profit">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h2>소득정보 - 참깨 (0.1ha 기준)</h2></div><br/>
+                <div class="row title_profit"><h2>가격예측 - 샤인머스캣 포도 (2kg)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_sesame.PNG"/>" width="500px" height="500px">
-                </div> </div>
-            </div> </div>      
-        </div>
-        <div class="modal fade" id="squarespaceModal-ginseng" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="container">
-                <div class="row title_profit">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h2>소득정보 - 인삼(4년근) (0.1ha 기준)</h2></div><br/>
-                <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_ginseng.PNG"/>" width="500px" height="500px">
-                </div> </div>
-            </div> </div>      
-        </div>
-        <div class="modal fade" id="squarespaceModal-tobacco" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="container">
-                <div class="row title_profit">
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <h2>소득정보 - 엽연초 (0.1ha 기준)</h2>
-                  </div><br/>
-                <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_tobacco.PNG"/>" width="500px" height="500px">
+                    <img src="#" width="500px">
                 </div> </div>
             </div> </div>      
         </div>

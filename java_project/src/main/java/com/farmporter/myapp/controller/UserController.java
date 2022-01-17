@@ -37,7 +37,18 @@ public class UserController{
 	public String profitCrop(Model model) {
 		return "profit_crop";
 	}
-	
+	@RequestMapping(value= {"/profit_fruit"})
+	public String profitFruit(Model model) {
+		return "profit_fruit";
+	}
+	@RequestMapping(value= {"/profit_vegi_fac"})
+	public String profitVegiFac(Model model) {
+		return "profit_vegi_fac";
+	}
+	@RequestMapping(value= {"/profit_vegi_wild"})
+	public String profitVegiWild(Model model) {
+		return "profit_vegi_wild";
+	}
 	
 	
 	
