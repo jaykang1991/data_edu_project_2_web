@@ -15,7 +15,7 @@
 		<property name="suffix" value=".jsp"/>
 	</bean>
 	
-	<mvc:view-controller path="/" view-name="home"/>
+	<mvc:view-controller path="/" view-name="main"/>
 	<mvc:resources mapping="/resources/**" location="/resources/"/>
 	
 		

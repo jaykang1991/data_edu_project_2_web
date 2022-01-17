@@ -21,43 +21,50 @@ public class UserController{
 	@Autowired
 	IUserService userService;
 	
-	@RequestMapping(value= {"/farm_sites"})
-	public String farmSites(Model model) {
-		return "farm_sites";
-	}
 	@RequestMapping(value= {"/"})
-	public String mainPage(Model model) {
-		return "main_page";
-	}
-	@RequestMapping(value= {"/intro"})
-	public String intro(Model model) {
-		return "intro";
-	}
-	@RequestMapping(value= {"/profit_crop"})
-	public String profitCrop(Model model) {
-		return "profit_crop";
-	}
-	@RequestMapping(value= {"/profit_fruit"})
-	public String profitFruit(Model model) {
-		return "profit_fruit";
-	}
-	@RequestMapping(value= {"/profit_vegi_fac"})
-	public String profitVegiFac(Model model) {
-		return "profit_vegi_fac";
-	}
-	@RequestMapping(value= {"/profit_vegi_wild"})
-	public String profitVegiWild(Model model) {
-		return "profit_vegi_wild";
-	}
-	@RequestMapping(value= {"/predict"})
-	public String predict(Model model) {
-		return "predict";
-	}
-	@RequestMapping(value= {"/world_price"})
-	public String worldPrice(Model model) {
-		return "world_price";
-	}
+	public String mainPage(Model model) {return "main_page";}
 	
+	@RequestMapping(value= {"/farm_sites"})
+	public String farmSites(Model model) {return "farm_sites";}
+
+	@RequestMapping(value= {"/intro"})
+	public String intro(Model model) {return "intro";}
+	
+	@RequestMapping(value= {"/profit_crop"})
+	public String profitCrop(Model model) {return "profit_crop";}
+	
+	@RequestMapping(value= {"/profit_fruit"})
+	public String profitFruit(Model model) {return "profit_fruit";}
+	
+	@RequestMapping(value= {"/profit_vegi_fac"})
+	public String profitVegiFac(Model model) {return "profit_vegi_fac";}
+	
+	@RequestMapping(value= {"/profit_vegi_wild"})
+	public String profitVegiWild(Model model) {return "profit_vegi_wild";}
+	
+	@RequestMapping(value= {"/predict"})
+	public String predict(Model model) {return "predict";}
+	
+	@RequestMapping(value= {"/world_price"})
+	public String worldPrice(Model model) {return "world_price";}
+	
+    @RequestMapping(value= {"/cost_comparison"})
+    public String costComparison(Model model) {return "cost_comparison";}
+    
+    @RequestMapping(value= {"/farmer_profit"})
+    public String farmerProfit(Model model) {return "farmer_profit";}
+    
+    @RequestMapping(value= {"/gov_land_cost"})
+    public String govLandCost(Model model) {return "gov_land_cost";}
+    
+    @RequestMapping(value= {"/loan_settle_cost"})
+    public String loanSettleCost(Model model) {return "loan_settle_cost";}
+    
+    @RequestMapping(value= {"/notice"})
+    public String notice(Model model) {return "notice";}
+    
+    @RequestMapping(value= {"/notice_page"})
+    public String noticePage(Model model) {return "notice_page";}
 	
 	
 	
