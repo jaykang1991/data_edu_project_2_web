@@ -1,5 +1,4 @@
-@charset "UTF-8";
-/* ë‚˜ëˆ”ê³ ë”• */
+/* ³ª´®°íµñ */
 @import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
 
 
@@ -8,7 +7,7 @@ body, html{
   height: 100%;
 }
 
-/* ë“œë¡­ë‹¤ìš´ ë°” */
+/* µå·Ó´Ù¿î ¹Ù */
 header{
   background-color: #F9FDCC;
   width: 100% !important;
@@ -16,7 +15,7 @@ header{
 .navbar {
   background-color: #F9FDCC;
 }
-/* ë©”ë‰´ */
+/* ¸Ş´º */
 div.menu{
   align-items: center;
   margin-right: auto;
@@ -24,14 +23,14 @@ div.menu{
   font-size: 18px;
   font-weight: bold;
 }  
-/* ë¡œê³  */
+/* ·Î°í */
 .navbar-brand{
   font-size: 30px;
   font-style : italic;
   margin: 20px;
   font-weight: bold;
 }
-/* ë¡œê·¸ì¸, íšŒì›ê°€ì…*/
+/* ·Î±×ÀÎ, È¸¿ø°¡ÀÔ*/
 #bs-example-navbar-collapse-1{
   margin-top: 20px;
 }
@@ -49,7 +48,7 @@ div.menu{
 } 
 
 
-/* ì‚¬ì´ë“œ ë°” */
+/* »çÀÌµå ¹Ù */
 .main{
   padding: 10px 10px 0 10px;
 }
@@ -157,7 +156,7 @@ div.menu{
     margin-left: 0px;
   }
 
-  nav.numberBar{ /* í•˜ë‹¨ í˜ì´ì§€ë„¤ì´ì…˜ ì°¸ê³ */
+  nav.numberBar{ /* ÇÏ´Ü ÆäÀÌÁö³×ÀÌ¼Ç Âü°í*/
     margin-left: 12%;
     width: 70%;
     padding-left: 100px;
@@ -209,7 +208,7 @@ div.menu{
   }
 
 
-  nav.numberBar{ /* í•˜ë‹¨ í˜ì´ì§€ë„¤ì´ì…˜ ì°¸ê³ */
+  nav.numberBar{ /* ÇÏ´Ü ÆäÀÌÁö³×ÀÌ¼Ç Âü°í*/
     margin-left: 12%;
     width: 70%;
     padding-left: 200px;
@@ -250,6 +249,7 @@ div.menu{
     padding-left: 30px;
     font-weight: bold;
   }
+  
 }
 
 nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav .open .dropdown-menu>li>a:focus {
@@ -257,18 +257,18 @@ nav.sidebar .navbar-nav .open .dropdown-menu>li>a:hover, nav.sidebar .navbar-nav
   background-color: transparent;
 }
 
-/* ì‚¬ì´ë“œ ë°” */
+/* »çÀÌµå ¹Ù */
 
 
-/* ìƒë‹¨ ì œëª© : ê·€ë† ê´€ë ¨ ì‚¬ì´íŠ¸ */
+/* »ó´Ü Á¦¸ñ : ±Í³ó °ü·Ã »çÀÌÆ® */
 h3{
   margin-top: -2%;
   margin-bottom: -7%;
-  /* ì œëª© ë°‘ì¤„ */
+  /* Á¦¸ñ ¹ØÁÙ */
   width: 80%;
   height: 50px;
   border-bottom: 1px solid green;
-  /* ì œëª© ë°‘ì¤„ */
+  /* Á¦¸ñ ¹ØÁÙ */
   }
 
 section{
@@ -311,6 +311,21 @@ button.close{
   font-size: 30px;
   padding-top: 10px;
   padding-right: 30px;
+}
+.intro_button{
+  margin-right: 40px;
+  margin-bottom: 40px;
+  float: left;
+  width: 150px;
+  height: 150px;
+}
+.intro_img{
+  width: 130px;
+}
+.intro_name{
+  text-align: center;
+  padding-left: 30px;
+  font-weight: bold;
 }
 
 footer {

@@ -27,28 +27,28 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/myapp/main_page.html">Farmporter</a>
+          <a class="navbar-brand" href="/myapp/main_page">Farmporter</a>
         </div>
         
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          <div class="menu">
           <ul class="nav navbar-nav">
-            <li class="nav"><a href="/myapp/intro.html">Intro<span class="sr-only">(current)</span></a></li>
+            <li class="nav"><a href="/myapp/intro">Intro<span class="sr-only">(current)</span></a></li>
           </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">귀농 가이드</a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="/myapp/profit_crop.html">소득정보</a></li>
-                <li><a href="/myapp/predict.html">가격정보</a></li>
-                <li><a href="/myapp/farmer profit.html">자금정보</a></li>
+                <li><a href="/myapp/profit_crop">소득정보</a></li>
+                <li><a href="/myapp/predict">가격정보</a></li>
+                <li><a href="/myapp/farmer profit">자금정보</a></li>
               </ul>
               <li class="nav"><a href="/myapp/farm_sites.html">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="/myapp/notice.html">공지사항</a></li>
-                <li><a href="/myapp/qna.html">Q&A</a></li>
+                <li><a href="/myapp/notice">공지사항</a></li>
+                <li><a href="/myapp/qna">Q&A</a></li>
               </ul>
             </li>
           </ul>
@@ -56,8 +56,8 @@
 
          <div class = "login">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/myapp/login.html">로그인</a></li>
-            <li><a href="/myapp/agreement.html">회원가입</a></li>
+            <li><a href="/myapp/login">로그인</a></li>
+            <li><a href="/myapp/agreement">회원가입</a></li>
            </div>
           </ul>
         </div>
