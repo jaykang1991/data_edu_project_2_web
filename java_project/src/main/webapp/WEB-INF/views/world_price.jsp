@@ -44,9 +44,9 @@
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/myapp/profit_crop">소득정보</a></li>
                 <li><a href="/myapp/predict">가격정보</a></li>
-                <li><a href="/myapp/farmer profit">자금정보</a></li>
+                <li><a href="/myapp/farmer_profit">자금정보</a></li>
               </ul>
-              <li class="nav"><a href="/myapp/farm_sites.html">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
+              <li class="nav"><a href="/myapp/farm_sites">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
@@ -106,7 +106,7 @@
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown">자금 정보 <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs glyphicon glyphicon-user"></span></a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="/myapp/farmer profit">농가 수입/소득</a></li>
+                <li><a href="/myapp/farmer_profit">농가 수입/소득</a></li>
                 <li class="divider"></li>
                 <li><a href="/myapp/gov_land_cost">정부지원금/농지가격</a></li>
                 <li class="divider"></li>
@@ -128,8 +128,8 @@
                   <div align="left">
                     <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
                   </div><br/>
-                  <div><a href="https://www.awe.gov.au/abares/data/weekly-commodity-price-update" target="_blank">
-                    출처: Austrian Government Department of Agriculture, Water and the Environment
+                  <div><a href="<c:url value="https://www.awe.gov.au/abares/data/weekly-commodity-price-update"/>" target="_blank">
+                    	출처: Austrian Government Department of Agriculture, Water and the Environment
                   </a></div>
                   <div id="crawling_table">
 
@@ -144,8 +144,8 @@
         <p>Copyright 2021 Farmporter. All rights reserved.</p>
       </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="<c:url value="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"/>"></script>
+<script src="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"/>"></script>
 </body>
 </html>
 <script>

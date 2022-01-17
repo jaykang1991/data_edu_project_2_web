@@ -21,9 +21,9 @@ public class UserController{
 	@Autowired
 	IUserService userService;
 	
-	@RequestMapping(value= {"/farm-sites"})
+	@RequestMapping(value= {"/farm_sites"})
 	public String farmSites(Model model) {
-		return "farm-sites";
+		return "farm_sites";
 	}
 	@RequestMapping(value= {"/"})
 	public String mainPage(Model model) {
@@ -49,7 +49,14 @@ public class UserController{
 	public String profitVegiWild(Model model) {
 		return "profit_vegi_wild";
 	}
-	
+	@RequestMapping(value= {"/predict"})
+	public String predict(Model model) {
+		return "predict";
+	}
+	@RequestMapping(value= {"/world_price"})
+	public String worldPrice(Model model) {
+		return "world_price";
+	}
 	
 	
 	

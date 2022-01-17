@@ -48,9 +48,9 @@
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/myapp/profit_crop">소득정보</a></li>
                 <li><a href="/myapp/predict">가격정보</a></li>
-                <li><a href="/myapp/farmer profit">자금정보</a></li>
+                <li><a href="/myapp/farmer_profit">자금정보</a></li>
               </ul>
-              <li class="nav"><a href="/myapp/farm_sites.html">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
+              <li class="nav"><a href="/myapp/farmer_profit">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
@@ -220,7 +220,7 @@
         <p>Copyright 2021 Farmporter. All rights reserved.</p>
       </footer>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="<c:url value="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"/>"></script>
+<script src="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"/>"></script>
 </body>
 </html>
