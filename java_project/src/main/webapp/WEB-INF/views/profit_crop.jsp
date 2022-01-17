@@ -332,7 +332,7 @@
                   <h2>소득정보 - 엽연초 (0.1ha 기준)</h2>
                   </div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_tobacco.png"/>" width="500px" height="500px">
+                    <img src="<c:url value="/resources/img/profit_tobacco.png"/>" width="500px" height="500px">
                 </div> </div>
             </div> </div>      
         </div>
