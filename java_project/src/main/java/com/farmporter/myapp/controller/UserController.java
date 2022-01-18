@@ -66,7 +66,6 @@ public class UserController{
     @RequestMapping(value= {"/notice_page"})
     public String noticePage(Model model) {return "notice_page";}
 	
-    testing;
 	
 	
 	
