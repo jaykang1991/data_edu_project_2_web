@@ -16,8 +16,7 @@ public class WpriceService implements IWpriceService {
 	
 	@Autowired
 	IWpriceRepository wpriceRepository;
-
-
+	
 	@Override
 	public List<WpriceVO> getWorldPrice() {
 		return wpriceRepository.getWorldPrice();

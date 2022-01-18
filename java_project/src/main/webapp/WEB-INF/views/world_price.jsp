@@ -152,18 +152,19 @@
 					      </tr>
 					    </thead>
 					    <tbody>
-					    <c:forEach var="user" items="${userList}">
+					    <c:forEach var="wPrice" items="${wPrice}">
 							<tr>
-								<td class = "Institution" style="vertical-align: middle; text-align:center;"><a href="<c:url value='/rg/${user.userId}'/>">${user.userId}</a></td>
-								<td class = "Institution" style="vertical-align: middle; text-align:center;">${user.name}</td>
-								<td class = "Institution" style="vertical-align: middle; text-align:center;">${user.password}</td>
-								<td class = "Institution" style="vertical-align: middle; text-align:center;">${user.address}</td>
-								<td class = "Institution" style="vertical-align: middle; text-align:center;">${user.birthDate}</td>
-								<td class = "Institution" style="vertical-align: middle; text-align:center;">${user.email}</td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${wPrice.indicator}</td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${wPrice.weekEnded}</td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${wPrice.unit}</td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${wPrice.latestPrice}</td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${wPrice.previousWeek}</td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${wPrice.weeklyChange}</td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${wPrice.priceYearAgo}</td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${wPrice.annualChange}</td>
 							</tr>
 						</c:forEach>
 					    </tbody>
-					        
 					</table>
                 </div>
             </div>
@@ -179,51 +180,3 @@
 <script src="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"/>"></script>
 </body>
 </html>
-<script>
-  $(document).ready(function(){
-    $('#load_data').click(function(){
-      $.ajax({
-        url:"crawling_data.csv",
-        dataType:"text",
-        success:function(data)
-        {
-          var crawling_data = data.split(/\r?\n|\r/);
-          var table_data = '<table class="table table-bordered table-striped"><tr><th></th><th>품목</th><th>기준날짜</th><th>단위</th><th>최근가격</th><th>전주</th><th>주간 변화</th><th>한달 전 가격</th><th>연간 변화</th></tr>';
-            for(var count=0; count < crawling_data.length; count++)
-            {
-              var cell_data = crawling_data[count].split(",");
-              table_data += '<tr>';
-                for(var cell_count = 0; cell_count < cell_data.length; cell_count++)
-                {
-                  if(count === 0){
-                    table_data += '<th>'+cell_data[cell_count]+'</th>';
-                  }
-                  else if(count === 1){
-                    table_data += '<td id="table_indicator" colspan="9">'+cell_data[count]+'</td>';
-                    break;
-                  }
-                  else if(count === 10){
-                    table_data += '<td id="table_indicator" colspan="9">'+cell_data[1]+'</td>';
-                    break;
-                  }
-                  else if(count === 16){
-                    table_data += '<td id="table_indicator" colspan="9">'+cell_data[1]+'</td>';
-                    break;
-                  }
-                  else if(count === 24){
-                    table_data += '<td id="table_indicator" colspan="9">'+cell_data[1]+'</td>';
-                    break;
-                  }
-                  else{
-                    table_data += '<td>'+cell_data[cell_count]+'</td>';
-                  }
-                }
-                table_data += '</tr>';
-            }
-            table_data += '</table>';
-            $('#crawling_table').html(table_data);
-        }
-      });
-    });
-  });
-</script>

@@ -12,7 +12,6 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.farmporter.myapp.model.UserVO;
-import com.farmporter.myapp.model.WorldPriceVO;
 import com.farmporter.myapp.model.WpriceVO;
 import com.farmporter.myapp.service.IUserService;
 import com.farmporter.myapp.service.IWpriceService;
@@ -50,8 +49,8 @@ public class UserController{
 	
 	@RequestMapping(value= {"/world_price"})
 	public String worldPrice(Model model) {
-		List<WpriceVO> userList = wpriceService.getWorldPrice();
-		model.addAttribute("userList", userList);
+		List<WpriceVO> wPrice = wpriceService.getWorldPrice();
+		model.addAttribute("wPrice", wPrice);
 		return "world_price";}
 	
     @RequestMapping(value= {"/cost_comparison"})
