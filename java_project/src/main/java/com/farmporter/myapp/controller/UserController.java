@@ -12,14 +12,17 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.farmporter.myapp.model.UserVO;
+import com.farmporter.myapp.model.WorldPriceVO;
+import com.farmporter.myapp.model.WpriceVO;
 import com.farmporter.myapp.service.IUserService;
+import com.farmporter.myapp.service.IWpriceService;
 
 
 @Controller
 public class UserController{
 	
 	@Autowired
-	IUserService userService;
+	IWpriceService wpriceService;
 	
 	@RequestMapping(value= {"/"})
 	public String mainPage(Model model) {return "main_page";}
@@ -46,7 +49,10 @@ public class UserController{
 	public String predict(Model model) {return "predict";}
 	
 	@RequestMapping(value= {"/world_price"})
-	public String worldPrice(Model model) {return "world_price";}
+	public String worldPrice(Model model) {
+		List<WpriceVO> userList = wpriceService.getWorldPrice();
+		model.addAttribute("userList", userList);
+		return "world_price";}
 	
     @RequestMapping(value= {"/cost_comparison"})
     public String costComparison(Model model) {return "cost_comparison";}

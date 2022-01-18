@@ -125,15 +125,46 @@
             <div class="row"><h3>가격정보 - 세계 주요식품 가격현황</h3></div><br/><br/><br/>
             <div class="row">
                 <div class="table-responsive">
-                  <div align="left">
-                    <button type="button" name="load_data" id="load_data" class="btn btn-info">Load Data</button>
-                  </div><br/>
                   <div><a href="<c:url value="https://www.awe.gov.au/abares/data/weekly-commodity-price-update"/>" target="_blank">
                     	출처: Austrian Government Department of Agriculture, Water and the Environment
                   </a></div>
-                  <div id="crawling_table">
-
-                  </div>
+					  <table class="table table-hover table-bordered results">
+					    <thead>
+					      <tr>
+					        <th class="col-md-2 col-xs-2">품목</th>
+					        <th class="col-md-5 col-xs-5">기준날짜</th>
+					        <th class="col-md-5 col-xs-5">단위</th>
+					        <th class="col-md-5 col-xs-5">최근가격</th>
+					        <th class="col-md-5 col-xs-5">지난 주</th>
+					        <th class="col-md-5 col-xs-5">주간 변화</th>
+					        <th class="col-md-5 col-xs-5">한달 전 가격</th>
+					   		<th class="col-md-5 col-xs-5">연간 변화</th>
+					      </tr>
+					      <tr>
+					        <th class="col-md-2 col-xs-2">Indicator</th>
+					        <th class="col-md-5 col-xs-5">Week ended</th>
+					        <th class="col-md-5 col-xs-5">Unit</th>
+					        <th class="col-md-5 col-xs-5">Latest price</th>
+					        <th class="col-md-5 col-xs-5">Previous week</th>
+					        <th class="col-md-5 col-xs-5">Weekly change</th>
+					        <th class="col-md-5 col-xs-5">Price 12 months ago</th>
+					   		<th class="col-md-5 col-xs-5">Annual change</th>
+					      </tr>
+					    </thead>
+					    <tbody>
+					    <c:forEach var="user" items="${userList}">
+							<tr>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;"><a href="<c:url value='/rg/${user.userId}'/>">${user.userId}</a></td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${user.name}</td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${user.password}</td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${user.address}</td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${user.birthDate}</td>
+								<td class = "Institution" style="vertical-align: middle; text-align:center;">${user.email}</td>
+							</tr>
+						</c:forEach>
+					    </tbody>
+					        
+					</table>
                 </div>
             </div>
         </div>
