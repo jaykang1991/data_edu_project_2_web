@@ -1,6 +1,5 @@
 package com.farmporter.myapp.model;
 
-import java.util.Date;
 
 public class WpriceVO {
 

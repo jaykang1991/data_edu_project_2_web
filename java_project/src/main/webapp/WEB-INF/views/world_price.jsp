@@ -131,24 +131,24 @@
 					  <table class="table table-hover table-bordered results">
 					    <thead>
 					      <tr>
-					        <th class="col-md-2 col-xs-2">품목</th>
-					        <th class="col-md-5 col-xs-5">기준날짜</th>
-					        <th class="col-md-5 col-xs-5">단위</th>
-					        <th class="col-md-5 col-xs-5">최근가격</th>
-					        <th class="col-md-5 col-xs-5">지난 주</th>
-					        <th class="col-md-5 col-xs-5">주간 변화</th>
-					        <th class="col-md-5 col-xs-5">한달 전 가격</th>
-					   		<th class="col-md-5 col-xs-5">연간 변화</th>
+					        <th class="col-md-2 col-xs-2" style="vertical-align: middle; text-align:center;">품목</th>
+					        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">기준날짜</th>
+					        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">단위</th>
+					        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">최근가격</th>
+					        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">지난 주</th>
+					        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">주간 변화</th>
+					        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">한달 전 가격</th>
+					   		<th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">연간 변화</th>
 					      </tr>
 					      <tr>
-					        <th class="col-md-2 col-xs-2">Indicator</th>
-					        <th class="col-md-5 col-xs-5">Week ended</th>
-					        <th class="col-md-5 col-xs-5">Unit</th>
-					        <th class="col-md-5 col-xs-5">Latest price</th>
-					        <th class="col-md-5 col-xs-5">Previous week</th>
-					        <th class="col-md-5 col-xs-5">Weekly change</th>
-					        <th class="col-md-5 col-xs-5">Price 12 months ago</th>
-					   		<th class="col-md-5 col-xs-5">Annual change</th>
+					        <th class="col-md-2 col-xs-2" style="vertical-align: middle; text-align:center;">Indicator</th>
+					        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">Week ended</th>
+					        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">Unit</th>
+					        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">Latest price</th>
+					        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">Previous week</th>
+					        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">Weekly change</th>
+					        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">Price 12 months ago</th>
+					   		<th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">Annual change</th>
 					      </tr>
 					    </thead>
 					    <tbody>
