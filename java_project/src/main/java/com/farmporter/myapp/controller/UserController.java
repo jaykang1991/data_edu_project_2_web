@@ -21,7 +21,7 @@ import com.farmporter.myapp.service.IWpriceService;
 public class UserController{
 	
 	@Autowired
-	IWpriceService wpriceService;
+	IUserService userService;
 	
 	@RequestMapping(value= {"/"})
 	public String mainPage(Model model) {return "main_page";}
@@ -47,11 +47,11 @@ public class UserController{
 	@RequestMapping(value= {"/predict"})
 	public String predict(Model model) {return "predict";}
 	
-	@RequestMapping(value= {"/world_price"})
-	public String worldPrice(Model model) {
-		List<WpriceVO> wPrice = wpriceService.getWorldPrice();
-		model.addAttribute("wPrice", wPrice);
-		return "world_price";}
+//	@RequestMapping(value= {"/world_price"})
+//	public String worldPrice(Model model) {
+//		List<WpriceVO> wPrice = wpriceService.getWorldPrice();
+//		model.addAttribute("wPrice", wPrice);
+//		return "world_price";}
 	
     @RequestMapping(value= {"/cost_comparison"})
     public String costComparison(Model model) {return "cost_comparison";}
@@ -73,68 +73,6 @@ public class UserController{
 	
 	
 	
-	
-	
-	
-//	@RequestMapping(value="/hr/count")
-//	public String empCount(
-//		@RequestParam(value="deptid", required=false, defaultValue="0") int deptid, Model model){
-//			if(deptid==0) {
-//				model.addAttribute("count", empService.getEmpCount());
-//			} else {
-//				model.addAttribute("count", empService.getEmpCount(50));
-//			}
-//				return "hr/count";
-//		
-//	}
-//	
-//	@RequestMapping(value= "/hr/{employeeId}")
-//	public String getEmpInfo(@PathVariable int employeeId, Model model) {
-//		EmpVO emp = empService.getEmpInfo(employeeId);
-//		model.addAttribute("emp", emp);
-//		return "hr/view";
-//	}
-//	
-//	@RequestMapping(value= "/hr/insert", method=RequestMethod.GET)
-//	public String insertEmp(Model model) {
-//		model.addAttribute("deptList", empService.getAllDeptId());
-//		model.addAttribute("jobList", empService.getAllJobId());
-//		model.addAttribute("managerList", empService.getAllManagerId());
-//		return "hr/insertform";
-//	}
-//
-//	@RequestMapping(value= "/hr/insert", method=RequestMethod.POST)
-//	public String insertEmp(EmpVO emp, Model model) {
-//		empService.insertEmp(emp);
-//		return "redirect:/hr";
-//	}
-//	
-//	@RequestMapping(value= "/hr/update", method=RequestMethod.GET)
-//	public String updateEmp(int empid, Model model) {
-//		model.addAttribute("emp", empService.getEmpInfo(empid));
-//		model.addAttribute("deptList", empService.getAllDeptId());
-//		model.addAttribute("jobList", empService.getAllJobId());
-//		model.addAttribute("managerList", empService.getAllManagerId());
-//		return "hr/updateform";
-//	}
-//	
-//	@RequestMapping(value= "/hr/update", method=RequestMethod.POST)
-//	public String updateEmp(EmpVO emp, Model model) {
-//		empService.updateEmp(emp);
-//		return "redirect:/hr/" + emp.getEmployeeId();
-//	}
-//	
-//	@RequestMapping(value= "/hr/delete", method=RequestMethod.GET)
-//	public String deleteEmp(int empid, Model model) {
-//		model.addAttribute("emp", empService.getEmpInfo(empid));
-//		return "hr/deleteform";
-//	}
-//	
-//	@RequestMapping(value= "/hr/delete", method=RequestMethod.POST)
-//	public String deleteEmp(int empid, String email, Model model) {
-//		empService.deleteEmp(empid, email);
-//		return "redirect:/hr/";
-//	}
 	
 /*	@ExceptionHandler({RuntimeException.class})
 	public ModelAndView runtimeException(HttpServletRequest request, Exception ex) {
