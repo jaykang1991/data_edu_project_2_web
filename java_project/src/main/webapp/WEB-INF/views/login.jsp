@@ -28,7 +28,7 @@
 </head>
 <body>
   <div class="jumbotron">
-      <h1 class="display-4">Welcome to <strong><a href="/main_page" class="noline">Farmporter</a></strong> </h1>
+      <h1 class="display-4">Welcome to <strong><a href="/myapp/main_page" class="noline">Farmporter</a></strong> </h1>
       <br>
       <p>
         We support your return to farm!
@@ -47,7 +47,7 @@
   
       <!-- Remind Passowrd -->
       <div id="formFooter">
-        <a href="/agreement">회원 가입</a>
+        <a href="/myapp/agreement">회원 가입</a>
         <a href="#" data-toggle="modal" data-target="#squarespaceModal-id">아이디 찾기</a>
         <a href="#" data-toggle="modal" data-target="#squarespaceModal-pw">비밀번호 찾기</a>
       </div>    
@@ -134,7 +134,7 @@
         /* alert("로그인 버튼 작동"); */
         
         /* 로그인 메소드 서버 요청 */
-    	 $("#login_form").attr("action", "login");
+        $("#login_form").attr("action", "login");
        $("#login_form").submit();
     }); 
 </script>
