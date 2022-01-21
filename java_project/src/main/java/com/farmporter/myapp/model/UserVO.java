@@ -5,8 +5,7 @@ import java.util.Date;
 public class UserVO {
 	private String userId;
 	private String name;
-	private String password;
-	private String address;
+	private String password;	
 	private Date birthDate;
 	private String email;
 	
@@ -34,14 +33,6 @@ public class UserVO {
 		this.password = password;
 	}
 
-	public String getAddress() {
-		return address;
-	}
-
-	public void setAddress(String address) {
-		this.address = address;
-	}
-
 	public Date getBirthDate() {
 		return birthDate;
 	}
@@ -57,13 +48,11 @@ public class UserVO {
 	public void setEmail(String email) {
 		this.email = email;
 	}
-
 	
 	@Override
 	public String toString() {
 		return "UserVO [userId=" + userId + ", name=" + name + ", password=" + password
-				+ ", address=" + address + ", birthDate=" + birthDate + ", email=" + email+ "]";
+				+ ", birthDate=" + birthDate + ", email=" + email+ "]";
 	}
-	
-	
+
 }

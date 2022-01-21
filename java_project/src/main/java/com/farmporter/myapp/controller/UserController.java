@@ -47,12 +47,6 @@ public class UserController{
 	@RequestMapping(value= {"/predict"})
 	public String predict(Model model) {return "predict";}
 	
-//	@RequestMapping(value= {"/world_price"})
-//	public String worldPrice(Model model) {
-//		List<WpriceVO> wPrice = wpriceService.getWorldPrice();
-//		model.addAttribute("wPrice", wPrice);
-//		return "world_price";}
-	
     @RequestMapping(value= {"/cost_comparison"})
     public String costComparison(Model model) {return "cost_comparison";}
     
@@ -71,7 +65,35 @@ public class UserController{
     @RequestMapping(value= {"/notice_page"})
     public String noticePage(Model model) {return "notice_page";}
 	
+	@RequestMapping(value= {"/login"})
+	public String logIn(Model model) {
+		return "login";
+	}
 	
+	@RequestMapping(value= {"/my_page"})
+	public String myPage(Model model) {
+		return "my_page";
+	}
+	
+	@RequestMapping(value= {"/register"})
+	public String register(Model model) {
+		return "register";
+	}
+	
+	@RequestMapping(value= {"/agreement"})
+	public String agreement(Model model) {
+		return "agreement";
+	}
+
+	/* ·Î±×ÀÎ */
+    @RequestMapping(value="/loginCheck", method=RequestMethod.POST)
+    public String loginCheck(@PathVariable String userid, String password, Model model){
+      UserVO user = userService.getUserCheck(userid, password);
+    	if(userid == user.getUserId() && password == user.getPassword() ) {    		
+    		return "/myapp/my_page";   
+       }
+        return "/myapp/my_page";
+    }
 	
 	
 /*	@ExceptionHandler({RuntimeException.class})
