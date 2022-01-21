@@ -57,7 +57,6 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/notice">공지사항</a></li>
-                <li><a href="/qna">Q&A</a></li>
               </ul>
             </li>
           </ul>

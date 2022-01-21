@@ -47,7 +47,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/myapp/notice">공지사항</a></li>
-                <li><a href="/myapp/qna">Q&A</a></li>
+
               </ul>
             </li>
           </ul>
@@ -80,10 +80,7 @@
       <li class="active"><a href="#">알림소식<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
       <li class="menu">
         <a href="/myapp/notice" class="menu" data-toggle="menu">공지 사항 <span></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
-      </li>
-      <li class="menu">
-        <a href="/myapp/qna" class="menu" data-toggle="menu">Q&A <span></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
-      </li>  
+      </li> 
     </ul>
   </div>
 </div>
