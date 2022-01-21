@@ -12,8 +12,8 @@
     <!-- script 연결  -->
     <script defer type="text/javascript"  src="<c:url value="/resources/js/agreement.js"/>"></script>
 
-      <!-- css 연결  -->
-      <link href= "<c:url value="/resources/css/agreement.css"/>" rel="stylesheet">
+    <!-- css 연결  -->
+    <link href= "<c:url value= "/resources/css/agreement.css"/>" rel="stylesheet">
       
   </head>
 
@@ -100,7 +100,7 @@
               </div>
             </li>          
           </ul>
-		  <button type="submit" class="next-button" onclick="location.href='/myapp/register'" disabled>확인</button>
+          <button type="submit" class="next-button" onclick="location.href='/myapp/register'" disabled>확인</button>
           <button type="submit" class="next-button" onclick="location.href='/main_page'">메인으로 돌아가기</button>
         </form>
       </div>
