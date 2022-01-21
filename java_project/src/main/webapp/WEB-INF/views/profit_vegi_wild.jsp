@@ -235,7 +235,7 @@
                     </button>
                     <h2>소득정보 - 양배추 (0.1ha 기준)</h2></div><br/>
                   <div class="row">
-                      <img src="<c:url value="/resources/img/vegi_wild/profit_cabbage.PNG"/>" width="500px" height="500px">
+                      <img src="<c:url value="/resources/img/vegi_wild/profit_cabbage.png"/>" width="500px" height="500px">
                   </div> </div>
               </div> </div>      
           </div>
@@ -249,7 +249,7 @@
                     </button>
                     <h2>소득정보 - 당근 (0.1ha 기준)</h2></div><br/>
                   <div class="row">
-                      <img src="<c:url value="/resources/img/vegi_wild/profit_carrot.PNG"/>" width="500px" height="500px">
+                      <img src="<c:url value="/resources/img/vegi_wild/profit_carrot.png"/>" width="500px" height="500px">
                   </div> </div>
               </div> </div>      
           </div>
@@ -277,7 +277,7 @@
                     </button>
                     <h2>소득정보 - 부추 (0.1ha 기준)</h2></div><br/>
                   <div class="row">
-                      <img src="<c:url value="/resources/img/vegi_wild/profit_chive_w.PNG"/>" width="500px" height="500px">
+                      <img src="<c:url value="/resources/img/vegi_wild/profit_chive_w.png"/>" width="500px" height="500px">
                   </div> </div>
               </div> </div>      
           </div>
@@ -291,7 +291,7 @@
                     </button>
                     <h2>소득정보 - 생강 (0.1ha 기준)</h2></div><br/>
                   <div class="row">
-                      <img src="<c:url value="/resources/img/vegi_wild/profit_ginger.PNG"/>" width="500px" height="500px">
+                      <img src="<c:url value="/resources/img/vegi_wild/profit_ginger.png"/>" width="500px" height="500px">
                   </div> </div>
               </div> </div>      
           </div>
@@ -305,7 +305,7 @@
                     </button>
                     <h2>소득정보 - 대파 (0.1ha 기준)</h2></div><br/>
                   <div class="row">
-                      <img src="<c:url value="/resources/img/vegi_wild/profit_greenonion.PNG"/>" width="500px" height="500px">
+                      <img src="<c:url value="/resources/img/vegi_wild/profit_greenonion.png"/>" width="500px" height="500px">
                   </div> </div>
               </div> </div>      
           </div>
@@ -319,7 +319,7 @@
                     </button>
                     <h2>소득정보 - 가을배추 (0.1ha 기준)</h2></div><br/>
                   <div class="row">
-                      <img src="<c:url value="/resources/img/vegi_wild/profit_lettuce_f.PNG"/>" width="500px" height="500px">
+                      <img src="<c:url value="/resources/img/vegi_wild/profit_lettuce_f.png"/>" width="500px" height="500px">
                   </div> </div>
               </div> </div>      
           </div>
@@ -333,7 +333,7 @@
                     </button>
                     <h2>소득정보 - 고랭지배추 (0.1ha 기준)</h2></div><br/>
                   <div class="row">
-                      <img src="<c:url value="/resources/img/vegi_wild/profit_lettuce_h.PNG"/>" width="500px" height="500px">
+                      <img src="<c:url value="/resources/img/vegi_wild/profit_lettuce_h.png"/>" width="500px" height="500px">
                   </div> </div>
               </div> </div>      
           </div>
@@ -347,7 +347,7 @@
                     </button>
                     <h2>소득정보 - 봄배추 (0.1ha 기준)</h2></div><br/>
                   <div class="row">
-                      <img src="<c:url value="/resources/img/vegi_wild/profit_lettuce_s.PNG"/>" width="500px" height="500px">
+                      <img src="<c:url value="/resources/img/vegi_wild/profit_lettuce_s.png"/>" width="500px" height="500px">
                   </div> </div>
               </div> </div>      
           </div>
@@ -361,7 +361,7 @@
                     </button>
                     <h2>소득정보 - 가을무 (0.1ha 기준)</h2></div><br/>
                   <div class="row">
-                      <img src="<c:url value="/resources/img/vegi_wild/profit_raddish_f.PNG"/>" width="500px" height="500px">
+                      <img src="<c:url value="/resources/img/vegi_wild/profit_raddish_f.png"/>" width="500px" height="500px">
                   </div> </div>
               </div> </div>      
           </div>
@@ -375,7 +375,7 @@
                     </button>
                     <h2>소득정보 - 고랭지무 (0.1ha 기준)</h2></div><br/>
                   <div class="row">
-                      <img src="<c:url value="/resources/img/vegi_wild/profit_raddish_h.PNG"/>" width="500px" height="500px">
+                      <img src="<c:url value="/resources/img/vegi_wild/profit_raddish_h.png"/>" width="500px" height="500px">
                   </div> </div>
               </div> </div>      
           </div>
@@ -389,7 +389,7 @@
                     </button>
                     <h2>소득정보 - 봄무 (0.1ha 기준)</h2></div><br/>
                   <div class="row">
-                      <img src="<c:url value="/resources/img/vegi_wild/profit_raddish_s.PNG"/>" width="500px" height="500px">
+                      <img src="<c:url value="/resources/img/vegi_wild/profit_raddish_s.png"/>" width="500px" height="500px">
                   </div> </div>
               </div> </div>
             </div>
@@ -403,7 +403,7 @@
                         </button>
                         <h2>소득정보 - 시금치 (0.1ha 기준)</h2></div><br/>
                       <div class="row">
-                          <img src="<c:url value="/resources/img/vegi_wild/profit_spinach.PNG"/>" width="500px" height="500px">
+                          <img src="<c:url value="/resources/img/vegi_wild/profit_spinach.png"/>" width="500px" height="500px">
                       </div> </div>
               </div> </div>
             </div>
@@ -417,7 +417,7 @@
                         </button>
                         <h2>소득정보 - 수박 (0.1ha 기준)</h2></div><br/>
                       <div class="row">
-                          <img src="<c:url value="/resources/img/vegi_wild/profit_waterm.PNG"/>" width="500px" height="500px">
+                          <img src="<c:url value="/resources/img/vegi_wild/profit_waterm.png"/>" width="500px" height="500px">
                       </div> </div>
                 </div> </div>  
               </div> 

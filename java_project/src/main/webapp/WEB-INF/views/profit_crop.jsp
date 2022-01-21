@@ -205,7 +205,7 @@
                   </button>
                   <h2>소득정보 - 겉보리 (0.1ha 기준)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_barley.PNG"/>" width="500px" height="500px">
+                    <img src="<c:url value="/resources/img/crop/profit_barley.png"/>" width="500px" height="500px">
                 </div> </div>
             </div> </div>      
         </div>
@@ -219,7 +219,7 @@
                   </button>
                   <h2>소득정보 - 쌀보리 (0.1ha 기준)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_ricebarley.PNG"/>" width="500px" height="500px">
+                    <img src="<c:url value="/resources/img/crop/profit_ricebarley.png"/>" width="500px" height="500px">
                 </div> </div>
             </div> </div>      
         </div>
@@ -233,7 +233,7 @@
                   </button>
                   <h2>소득정보 - 맥주보리 (0.1ha 기준)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_beerbarley.PNG"/>" width="500px" height="500px">
+                    <img src="<c:url value="/resources/img/crop/profit_beerbarley.png"/>" width="500px" height="500px">
                 </div> </div>
             </div> </div>      
         </div>
@@ -247,7 +247,7 @@
                   </button>
                   <h2>소득정보 - 노지풋옥수수 (0.1ha 기준)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_corn.PNG"/>" width="500px" height="500px">
+                    <img src="<c:url value="/resources/img/crop/profit_corn.png"/>" width="500px" height="500px">
                 </div> </div>
             </div> </div>      
         </div>
@@ -261,7 +261,7 @@
                   </button>
                   <h2>소득정보 - 고구마 (0.1ha 기준)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_sweetpotato.PNG"/>" width="500px" height="500px">
+                    <img src="<c:url value="/resources/img/crop/profit_sweetpotato.png"/>" width="500px" height="500px">
                 </div> </div>
             </div> </div>      
         </div>
@@ -275,7 +275,7 @@
                   </button>
                   <h2>소득정보 - 봄감자 (0.1ha 기준)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_springpotato.PNG"/>" width="500px" height="500px">
+                    <img src="<c:url value="/resources/img/crop/profit_springpotato.png"/>" width="500px" height="500px">
                 </div> </div>
             </div> </div>      
         </div>
@@ -289,7 +289,7 @@
                   </button>
                   <h2>소득정보 - 가을감자 (0.1ha 기준)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_fallpotato.PNG"/>" width="500px" height="500px">
+                    <img src="<c:url value="/resources/img/crop/profit_fallpotato.png"/>" width="500px" height="500px">
                 </div> </div>
             </div> </div>      
         </div>
@@ -303,7 +303,7 @@
                   </button>
                   <h2>소득정보 - 참깨 (0.1ha 기준)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_sesame.PNG"/>" width="500px" height="500px">
+                    <img src="<c:url value="/resources/img/crop/profit_sesame.png"/>" width="500px" height="500px">
                 </div> </div>
             </div> </div>      
         </div>
@@ -317,7 +317,7 @@
                   </button>
                   <h2>소득정보 - 인삼(4년근) (0.1ha 기준)</h2></div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_ginseng.PNG"/>" width="500px" height="500px">
+                    <img src="<c:url value="/resources/img/crop/profit_ginseng.png"/>" width="500px" height="500px">
                 </div> </div>
             </div> </div>      
         </div>
@@ -332,7 +332,7 @@
                   <h2>소득정보 - 엽연초 (0.1ha 기준)</h2>
                   </div><br/>
                 <div class="row">
-                    <img src="<c:url value="/resources/img/crop/profit_tobacco.PNG"/>" width="500px" height="500px">
+                    <img src="<c:url value="/resources/img/crop/profit_tobacco.png"/>" width="500px" height="500px">
                 </div> </div>
             </div> </div>      
         </div>
