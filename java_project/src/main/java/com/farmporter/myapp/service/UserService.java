@@ -15,56 +15,39 @@ public class UserService implements IUserService {
 	@Autowired
 	IUserRepository userRepository;
 	
-//	@Override
-//	public int getEmpCount() {
-//		return empRepository.getEmpCount();
-//	}
-//
-//	@Override
-//	public int getEmpCount(int deptid) {
-//		return empRepository.getEmpCount(deptid);
-//	}
-
+	/* 회원가입 */
+	@Override
+	public void insertUser(UserVO user) {
+		userRepository.insertUser(user);
+	}	
+	/* 회원 정보 조회 (아이디로) */
+	@Override
+	 public UserVO getUserInfo(String userid) { 
+		return userRepository.getUserInfo(userid);
+	}
+	
+	/* 로그인 정보 일치 체크 */
+	@Override
+	public UserVO getUserCheck(String userid, String password) {
+		return userRepository.getUserCheck(userid, password);
+	}
+	
+	/* 회원 수 조회 */
+	@Override
+	public int getUserCount() {
+		return userRepository.getUserCount();
+	}
+	
+	/* 가입한 회원 리스트 조회 */
 	@Override
 	public List<UserVO> getUserList() {
 		return userRepository.getUserList();
 	}
-//
-//	@Override
-//	public EmpVO getEmpInfo(int empid) {
-//		return empRepository.getEmpInfo(empid);
-//	}
-//
-//	@Override
-//	public void updateEmp(EmpVO emp) {
-//		empRepository.updateEmp(emp);
-//	}
-//
-//	@Override
-//	public void insertEmp(EmpVO emp) {
-//		empRepository.insertEmp(emp);
-//	}
-//
-//	@Override
-//	public void deleteEmp(int empid, String email) {
-//		empRepository.deleteJobHistory(empid);
-//		empRepository.deleteEmp(empid, email);
-//	}
-//
-//	@Override
-//	public List<Map<String, Object>> getAllDeptId() {
-//		return empRepository.getAllDeptId();
-//	}
-//
-//	@Override
-//	public List<Map<String, Object>> getAllJobId() {
-//		return empRepository.getAllJobId();
-//	}
-//
-//	@Override
-//	public List<Map<String, Object>> getAllManagerId() {
-//		return empRepository.getAllManagerId();
-//	}
-//	
-//	
+	
+	/* 회원 정보 업데이트 */
+	@Override
+	public void updateUser(UserVO user) {
+		userRepository.updateUser(user);
+	}
+		
 }
