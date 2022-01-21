@@ -11,9 +11,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
-import com.farmporter.myapp.model.UserVO;
 import com.farmporter.myapp.model.WpriceVO;
-import com.farmporter.myapp.service.IUserService;
 import com.farmporter.myapp.service.IWpriceService;
 
 
