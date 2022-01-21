@@ -23,8 +23,9 @@ public class UserController{
 	@Autowired
 	IUserService userService;
 	
-	@RequestMapping(value= {"/"})
+	@RequestMapping(value= {"/", "/main_page"})
 	public String mainPage(Model model) {return "main_page";}
+	
 	
 	@RequestMapping(value= {"/farm_sites"})
 	public String farmSites(Model model) {return "farm_sites";}

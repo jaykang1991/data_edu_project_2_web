@@ -56,7 +56,7 @@
 
          <div class = "login">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="//myapp/login/login">로그인</a></li>
+            <li><a href="/myapp/login/login">로그인</a></li>
             <li><a href="/myapp/login/agreement">회원가입</a></li>
            </div>
           </ul>
