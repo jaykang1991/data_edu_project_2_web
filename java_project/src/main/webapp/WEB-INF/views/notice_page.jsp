@@ -47,7 +47,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/myapp/notice">공지사항</a></li>
-
+                <li><a href="/myapp/qna">Q&A</a></li>
               </ul>
             </li>
           </ul>
@@ -80,7 +80,10 @@
       <li class="active"><a href="#">알림소식<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
       <li class="menu">
         <a href="/myapp/notice" class="menu" data-toggle="menu">공지 사항 <span></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
-      </li> 
+      </li>
+      <li class="menu">
+        <a href="/myapp/qna" class="menu" data-toggle="menu">Q&A <span></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+      </li>  
     </ul>
   </div>
 </div>
@@ -95,36 +98,37 @@
     
     <table class="table table table-bordered results">
       <thead style="height: 50px;">
+      
+      
+      <c:forEach var="notice" items="${notice}">
         <tr>
             <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">제목</th>
           
-            <th class="col-md-5 col-xs-5" colspan="5" style="vertical-align: middle;">	2020년도 주민참여 예산제도 운영 결과 공고</th>
+            <th class="col-md-5 col-xs-5" colspan="5" style="vertical-align: middle;"> ${notice.title}</th>
             
         </tr>
     </thead>
           
           
           
-          
+     
       <tbody>
-        <tr>
-        <td class="success" style="height: 10%; vertical-align: middle; text-align:center;">작성자</td>
-          <td class="title" style="vertical-align: middle; padding-left:20px" >기획실</td>
+      
+      <tr>
+      <td class="success" style="height: 10%; vertical-align: middle; text-align:center;">작성자</td>
+          <td class="title" style="vertical-align: middle; padding-left:20px" >notice.USERID_2</td>
           <td class="success" style="vertical-align: middle; text-align:center;">등록일</td>
-          <td style="vertical-align: middle; padding-left:20px">2021-02-26</td>
+          <td style="vertical-align: middle; padding-left:20px">${notice.regDate}"</td>
         </tr>
           <td class="number" style="vertical-align: middle; text-align:center;">내용</td>
-          <td colspan="3" style="padding: 2%;">
-            우리군 예산운영과 관련하여 투명하고 효율적인 예산편성을 위하여 군민 여러분의 다양한 의견과 제안을 수렴하고자 실시한 주민참여 예산제도 운영 결과를 공개합니다.
-            2020년 12월 31일
-            평창군수
-          </td>
+          <td colspan="3" style="padding: 2%;">${notice.content}</td>
         </tr>
-      </tbody>
+	</tbody>
+	</c:forEach>
     </table>
     <button type="submit"class="btn btn-default" style="float:right">
         <a href="/myapp/notice">목록</button></a>
-        
+    
     
 </section>    
 

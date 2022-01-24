@@ -48,6 +48,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/myapp/notice">공지사항</a></li>
+                <li><a href="/myapp/qna">Q&A</a></li>
               </ul>
             </li>
           </ul>
@@ -55,7 +56,7 @@
 
          <div class = "login">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="/myapp/login/login">로그인</a></li>
+            <li><a href="//myapp/login/login">로그인</a></li>
             <li><a href="/myapp/login/agreement">회원가입</a></li>
            </div>
           </ul>
@@ -81,6 +82,9 @@
       <li class="menu">
         <a href="/myapp/notice" class="menu" data-toggle="menu">공지 사항 <span></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
       </li>
+      <li class="menu">
+        <a href="/myapp/qna" class="menu" data-toggle="menu">Q&A <span></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
+      </li>  
     </ul>
   </div>
 </div>
@@ -102,62 +106,18 @@
       </tr>
     </thead>
     <tbody>
+    <c:forEach var="notice" items="${notice}">
       <tr>
-        <td class="number" style="vertical-align: middle; text-align:center;">1</td>
-        <td class="title" style="vertical-align: middle; text-align:center;">
-            <a href="/myapp/notice_page">2020년도 주민참여 예산제도 운영 결과 공고</a>
+        <td class = "number" style="vertical-align: middle; text-align:center;">${noticeId.noticeNo}</td>
+        <td class = "title" style="vertical-align: middle; text-align:center;">
+            <a href = "/myapp/notice_page">${notice.title}</a>
         </td>
-        <td style="vertical-align: middle; text-align:center;">기획실</td>
-        <td style="vertical-align: middle; text-align:center;">2021-02-26</td>
+        <td style = "vertical-align: middle; text-align:center;">notice.USERID_2</a></td>
+        <td style = "vertical-align: middle; text-align:center;">${notice.regDate}</td>
       </tr>
-      <tr>
-        <td class="number" style="vertical-align: middle; text-align:center;">2</td>
-        <td class="title" style="vertical-align: middle; text-align:center;">
-            <a href="#">2019년도 주민참여 예산제도 운영 결과 공고</a>
-        </td>
-        <td style="vertical-align: middle; text-align:center;">기획담당관</td>
-        <td style="vertical-align: middle; text-align:center;">2019-12-05</td>
-      </tr>
-      <tr>
-        <td class="number" style="vertical-align: middle; text-align:center;">3</td>
-        <td class="title" style="vertical-align: middle; text-align:center;">
-            <a href="#">2018년도 주민참여 예산제도 운영 결과 공고</a>
-        </td>
-        <td style="vertical-align: middle; text-align:center;">기획감사실</td>
-        <td class="title" style="vertical-align: middle; text-align:center;">2018-10-18</td>
-      </tr>
-      <tr>
-        <td class="number" style="vertical-align: middle; text-align:center;">4</td>
-        <td class="title" style="vertical-align: middle; text-align:center;">
-            <a href="#">2017년도 주민참여 예산제도 운영 결과 공고</a>
-        </td>
-        <td style="vertical-align: middle; text-align:center;">기획감사실</td>
-        <td style="vertical-align: middle; text-align:center;">2017-10-31</td>
-      </tr>
-      <tr>
-        <td class="number" style="vertical-align: middle; text-align:center;">5</td>
-        <td class="title" style="vertical-align: middle; text-align:center;">
-            <a href="#">2016년도 주민참여 예산제도 운영 결과 공고</a>
-        </td>
-        <td style="vertical-align: middle; text-align:center;">기획감사실</td>
-        <td style="vertical-align: middle; text-align:center;">2016-10-31</td>
-      </tr>
-      <tr>
-        <td class="number" style="vertical-align: middle; text-align:center;">6</td>
-        <td class="title" style="vertical-align: middle; text-align:center;">
-            <a href="#">2015년도 주민참여 예산제도 운영 결과 공고</a>
-        </td>
-        <td style="vertical-align: middle; text-align:center;">기획감사실</td>
-        <td style="vertical-align: middle; text-align:center;">2015-10-29</td>
-      </tr>
-      <tr>
-        <td class="number" style="vertical-align: middle; text-align:center;">7</td>
-        <td class="title" style="vertical-align: middle; text-align:center;">
-            <a href="#">2014년도 주민참여 예산제도 운영 결과 공고</a>
-        </td>
-        <td class="number" style="vertical-align: middle; text-align:center;">기획감사실</td>
-        <td style="vertical-align: middle; text-align:center;">2014-10-23</td>
-      </tr>
+
+
+      </c:forEach>
     </tbody>
   </table>
 <!-- 메인메뉴 -->
