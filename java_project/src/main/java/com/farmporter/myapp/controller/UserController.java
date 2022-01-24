@@ -2,6 +2,8 @@ package com.farmporter.myapp.controller;
 
 import java.util.List;
 
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -86,15 +88,23 @@ public class UserController{
 		return "agreement";
 	}
 
-	/* 로그인 */
+	   /* 로그인 */
     @RequestMapping(value="/loginCheck", method=RequestMethod.POST)
-    public String loginCheck(@PathVariable String userid, String password, Model model){
-      UserVO user = userService.getUserCheck(userid, password);
-    	if(userid == user.getUserId() && password == user.getPassword() ) {    		
-    		return "/myapp/my_page";   
+    public String loginCheck(@RequestParam String userid, @RequestParam String password, Model model, HttpServletRequest request){
+       HttpSession session = request.getSession();
+       UserVO user = userService.getUserCheck(userid, password);
+      if(userid.equals(user.getUserId()) && password.equals(user.getPassword())) {          
+          return "redirect:my_page";   
        }
-        return "/myapp/my_page";
+        return "redirect:login";
     }
+    
+   @RequestMapping(value= "/signup", method=RequestMethod.POST)
+   public String insertUser(UserVO user, Model model) {
+      userService.insertUser(user);
+      return "redirect:main_page";
+   }
+   
 	
 	
 /*	@ExceptionHandler({RuntimeException.class})

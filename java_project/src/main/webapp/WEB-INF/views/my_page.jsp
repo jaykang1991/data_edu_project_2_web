@@ -4,27 +4,27 @@
     
 <!DOCTYPE html>
 <html lang="ko">
-		<head>
-		  <meta charset="UTF-8">
-		  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-		  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-		
-		  <!-- 합쳐지고 최소화된 최신 CSS -->
-		  <link href="<c:url value= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>" rel="stylesheet"> 
-		  <!-- 부가적인 테마 -->
-		  <link href="<c:url value= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"/> "rel="stylesheet"> 
-		  <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-		  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>    
-		  
-		  <link href="<c:url value="/resources/css/my_page.css"/>" rel="stylesheet" >
-		  <link href="<c:url value= "https://use.fontawesome.com/releases/v5.15.4/css/all.css" />"  rel="stylesheet"> 
-		    
-		    <script src="/resources/js/my_page.js"></script>
-		      
-		  <title>My page</title>
-		<style>
-		    
-		</style>
+      <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+        <!-- 합쳐지고 최소화된 최신 CSS -->
+        <link href="<c:url value= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>" rel="stylesheet"> 
+        <!-- 부가적인 테마 -->
+        <link href="<c:url value= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"/> "rel="stylesheet"> 
+        <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>    
+        
+        <link href="<c:url value="/resources/css/my_page.css"/>" rel="stylesheet" >
+        <link href="<c:url value= "https://use.fontawesome.com/releases/v5.15.4/css/all.css" />"  rel="stylesheet"> 
+          
+          <script src="/resources/js/my_page.js"></script>
+            
+        <title>My page</title>
+      <style>
+          
+      </style>
 </head>
 <body>
   <header>
@@ -57,6 +57,7 @@
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/notice">공지사항</a></li>
+                <li><a href="/qna">Q&A</a></li>
               </ul>
             </li>
           </ul>
@@ -76,7 +77,7 @@
 <section>
   <div class="jumbotron ">
     <h1 class="display-4"> My page</h1>
-  </div>	
+  </div>   
 
   <div class="registration-form">
     <form>     
@@ -85,7 +86,7 @@
       </div>
       <div class="form-group">
         <input type="text" class="form-control item" id="username" placeholder="이름">
-      </div>			
+      </div>         
       <div class="form-group password">
         
           <input type="password" class="form-control pw" id="password" placeholder="비밀번호">        
@@ -101,7 +102,7 @@
       <div class="form-group">
         <button type="button" class="btn btn-block create-account"> 수정 완료</button>
       </div>
-    </form>		 
+    </form>       
   </div>    
     
 </section>    

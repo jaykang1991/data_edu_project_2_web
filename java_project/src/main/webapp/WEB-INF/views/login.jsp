@@ -39,13 +39,13 @@
   <div class="wrapper">
     <div id="formContent">        
       <!-- Login Form -->
-      <form id="login_form" method="post" action="/myapp/loginCheck">
-        <input type="text" id="login" name="userId" placeholder="id">
+      <form id="login_form"  method="post"  action="/myapp/loginCheck">
+        <input type="text" id="userid" name="userid" placeholder="id">
         <input type="password" id="password" name="password" placeholder="password">
         <input type="submit" class="login_button" value="Log In" >
       </form>
   
-      <!-- Remind Passowrd -->
+      <!-- Remind Information -->
       <div id="formFooter">
         <a href="/myapp/agreement">회원 가입</a>
         <a href="#" data-toggle="modal" data-target="#squarespaceModal-id">아이디 찾기</a>
@@ -53,6 +53,7 @@
       </div>    
     </div>
   </div>  
+ 
     
   <!-- line modal 아이디 찾기 -->
   <div class="modal fade" id="squarespaceModal-id" tabindex="-1" role="dialog" aria-labelledby="modalLabel" aria-hidden="true">
@@ -128,16 +129,16 @@
     </div>      
   </div>
 
-<script> 
+<!-- <script> 
     /* 로그인 버튼 클릭 메서드 */
     $(".login_button").click(function(){        
         /* alert("로그인 버튼 작동"); */
         
         /* 로그인 메소드 서버 요청 */
-        $("#login_form").attr("action", "login");
+        $("#login_form").attr("action");
        $("#login_form").submit();
     }); 
-</script>
+</script>  -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
