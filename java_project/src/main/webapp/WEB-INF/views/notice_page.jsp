@@ -98,36 +98,26 @@
     
     <table class="table table table-bordered results">
       <thead style="height: 50px;">
-      
-      
-      <c:forEach var="notice" items="${notice}">
         <tr>
             <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">제목</th>
-          
             <th class="col-md-5 col-xs-5" colspan="5" style="vertical-align: middle;"> ${notice.title}</th>
-            
         </tr>
     </thead>
-          
-          
-          
-     
       <tbody>
-      
       <tr>
       <td class="success" style="height: 10%; vertical-align: middle; text-align:center;">작성자</td>
-          <td class="title" style="vertical-align: middle; padding-left:20px" >notice.USERID_2</td>
+          <td class="title" style="vertical-align: middle; padding-left:20px" >${notice.userId_2}</td>
           <td class="success" style="vertical-align: middle; text-align:center;">등록일</td>
           <td style="vertical-align: middle; padding-left:20px">${notice.regDate}"</td>
         </tr>
+        <tr>
           <td class="number" style="vertical-align: middle; text-align:center;">내용</td>
           <td colspan="3" style="padding: 2%;">${notice.content}</td>
         </tr>
 	</tbody>
-	</c:forEach>
     </table>
     <button type="submit"class="btn btn-default" style="float:right">
-        <a href="/myapp/notice">목록</button></a>
+        <a href="/myapp/notice">목록</a></button>
     
     
 </section>    

@@ -82,9 +82,6 @@
       <li class="menu">
         <a href="/myapp/notice" class="menu" data-toggle="menu">공지 사항 <span></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
       </li>
-      <li class="menu">
-        <a href="/myapp/qna" class="menu" data-toggle="menu">Q&A <span></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a>
-      </li>  
     </ul>
   </div>
 </div>
@@ -108,11 +105,11 @@
     <tbody>
     <c:forEach var="notice" items="${notice}">
       <tr>
-        <td class = "number" style="vertical-align: middle; text-align:center;">${noticeId.noticeNo}</td>
+        <td class = "number" style="vertical-align: middle; text-align:center;">${notice.noticeNo}</td>
         <td class = "title" style="vertical-align: middle; text-align:center;">
-            <a href = "/myapp/notice_page">${notice.title}</a>
+            <a href="/myapp/notice/${notice.noticeNo}/">${notice.title}</a>
         </td>
-        <td style = "vertical-align: middle; text-align:center;">notice.USERID_2</a></td>
+        <td style = "vertical-align: middle; text-align:center;">${notice.userId_2}</td>
         <td style = "vertical-align: middle; text-align:center;">${notice.regDate}</td>
       </tr>
 

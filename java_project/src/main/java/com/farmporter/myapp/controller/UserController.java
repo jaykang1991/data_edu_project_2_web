@@ -1,22 +1,17 @@
 package com.farmporter.myapp.controller;
 
-import java.util.List;
-
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.farmporter.myapp.model.UserVO;
-import com.farmporter.myapp.model.WpriceVO;
 import com.farmporter.myapp.service.IUserService;
-import com.farmporter.myapp.service.IWpriceService;
 
 
 @Controller
@@ -62,11 +57,6 @@ public class UserController{
     @RequestMapping(value= {"/loan_settle_cost"})
     public String loanSettleCost(Model model) {return "loan_settle_cost";}
     
-    @RequestMapping(value= {"/notice"})
-    public String notice(Model model) {return "notice";}
-    
-    @RequestMapping(value= {"/notice_page"})
-    public String noticePage(Model model) {return "notice_page";}
 	
 	@RequestMapping(value= {"/login"})
 	public String logIn(Model model) {

@@ -6,7 +6,7 @@ public class NoticeVO {
 	int noticeNo;
 	String title;
 	String content;
-	String UserId_2;
+	String userId_2;
 	Date regDate;
 	Date updateDate;
 	
@@ -30,10 +30,10 @@ public class NoticeVO {
 	}
 	
 	public String getUserId_2() {
-		return UserId_2;
+		return userId_2;
 	}
 	public void setUserId_2(String UserId_2) {
-		this.UserId_2 = UserId_2;
+		this.userId_2 = UserId_2;
 	}
 	public Date getRegDate() {
 		return regDate;
@@ -49,7 +49,7 @@ public class NoticeVO {
 	}
 	@Override
 	public String toString() {
-		return "NoticeVO [noticeNo=" + noticeNo + ", title=" + title + ", content=" + content + ", UserId_2=" + UserId_2
+		return "NoticeVO [noticeNo=" + noticeNo + ", title=" + title + ", content=" + content + ", UserId_2=" + userId_2
 				+ ", regDate=" + regDate + ", updateDate=" + updateDate + "]";
 	}
 	

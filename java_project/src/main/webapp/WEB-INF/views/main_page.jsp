@@ -41,7 +41,7 @@
                 <li><a href="/myapp/predict">가격정보</a></li>
                 <li><a href="/myapp/farmer_profit">자금정보</a></li>
               </ul>
-              <li class="nav"><a href="/myapp/farmer_profit">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
+              <li class="nav"><a href="/myapp/farm_sites">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
             </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
