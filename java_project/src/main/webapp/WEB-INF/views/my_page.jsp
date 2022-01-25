@@ -8,28 +8,26 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      
-        <!-- 합쳐지고 최소화된 최신 CSS -->
         <link href="<c:url value= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>" rel="stylesheet"> 
-        <!-- 부가적인 테마 -->
-        <link href="<c:url value= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"/> "rel="stylesheet"> 
-        <!-- 합쳐지고 최소화된 최신 자바스크립트 -->
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>    
-        
-        <link href="<c:url value="/resources/css/my_page.css"/>" rel="stylesheet" >
-        <link href="<c:url value= "https://use.fontawesome.com/releases/v5.15.4/css/all.css" />"  rel="stylesheet"> 
-          
-          <script src="/resources/js/my_page.js"></script>
+		<link href="<c:url value= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"/> "rel="stylesheet"> 
+		<link href= "<c:url value= "/resources/css/my_page.css"/>" rel="stylesheet"> 
+		<link href="<c:url value= "https://use.fontawesome.com/releases/v5.15.4/css/all.css" />"  rel="stylesheet"> 
+		
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>		  
+		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+        <script src="/resources/js/my_page.js"></script>
             
         <title>My page</title>
-      <style>
-          
-      </style>
+		<style type="text/css">
+	          #before{display: none;}
+	          #after{display:none;}
+	    </style>
 </head>
 <body>
   <header>
     <div class="navbar navbar-default">
       <div class="container-fluid">
+
         <div class="navbar-header">
           <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
             <span class="sr-only">Toggle navigation</span>
@@ -37,40 +35,43 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
-          <a class="navbar-brand" href="/main_page">Farmporter</a>
+          <a class="navbar-brand" href="/myapp/main_page">Farmporter</a>
         </div>
         
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          <div class="menu">
           <ul class="nav navbar-nav">
-  
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">귀농 가이드</a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="/profit_crop">소득정보</a></li>
-                <li><a href="#">가격정보</a></li>
-                <li><a href="#">자금정보</a></li>
+                <li><a href="/myapp/profit_crop">소득정보</a></li>
+                <li><a href="/myapp/predict">가격정보</a></li>
+                <li><a href="/myapp/farmer_profit">자금정보</a></li>
               </ul>
-              <li class="nav"><a href="/farm_sites">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
-            </li>
+              <li class="nav"><a href="/myapp/farm_sites">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
               <ul class="dropdown-menu" role="menu">
-                <li><a href="/notice">공지사항</a></li>
-                <li><a href="/qna">Q&A</a></li>
+                <li><a href="/myapp/notice">공지사항</a></li>
               </ul>
             </li>
           </ul>
-         </div>      
-         <div class = "login">
-          <ul class="nav navbar-nav navbar-right">
-           
-            <li><a href="/login">로그인</a></li>
-            <li><a href="/agreement">회원가입</a></li>
-           </div>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
+         </div> 
+
+		<div id="before" class = "login">
+         		<ul class="nav navbar-nav navbar-right">
+           		<li><a href="/myapp/login">로그인</a></li>
+           		<li><a href="/myapp/agreement">회원가입</a></li>
+           	</ul>
+          </div>
+          <div id="after" class = "login">
+         		<ul class="nav navbar-nav navbar-right">
+	            <li><a href="/myapp/login">로그아웃</a></li>
+	            <li><a href="/myapp/my_page">My page</a></li>
+	        </ul>
+          </div>
+        </div>
+      </div>
     </div>
   </header>
 <!-- 메인메뉴 -->
@@ -186,13 +187,9 @@
 </div>
 
 
-
-
 <footer>
   여기는 foot 구간입니다.
 </footer>
-</body>
-
 
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>

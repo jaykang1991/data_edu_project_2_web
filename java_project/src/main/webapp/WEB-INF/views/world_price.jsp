@@ -18,6 +18,10 @@
         font-weight: bold;
       }
     </style>
+    <style type="text/css">
+          #before{display: none;}
+          #after{display:none;}
+    </style>
 </head>
 <body>
   <header>
@@ -37,8 +41,6 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
          <div class="menu">
           <ul class="nav navbar-nav">
-            <li class="nav"><a href="/myapp/intro">Intro<span class="sr-only">(current)</span></a></li>
-          </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">귀농 가이드</a>
               <ul class="dropdown-menu" role="menu">
@@ -47,7 +49,6 @@
                 <li><a href="/myapp/farmer_profit">자금정보</a></li>
               </ul>
               <li class="nav"><a href="/myapp/farm_sites">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
-            </li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
               <ul class="dropdown-menu" role="menu">
@@ -55,14 +56,20 @@
               </ul>
             </li>
           </ul>
-         </div>
+         </div> 
 
-         <div class = "login">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/myapp/login">로그인</a></li>
-            <li><a href="/myapp/agreement">회원가입</a></li>
-           </div>
-          </ul>
+		<div id="before" class = "login">
+         		<ul class="nav navbar-nav navbar-right">
+           		<li><a href="/myapp/login">로그인</a></li>
+           		<li><a href="/myapp/agreement">회원가입</a></li>
+           	</ul>
+          </div>
+          <div id="after" class = "login">
+         		<ul class="nav navbar-nav navbar-right">
+	            <li><a href="/myapp/login">로그아웃</a></li>
+	            <li><a href="/myapp/my_page">My page</a></li>
+	        </ul>
+          </div>
         </div>
       </div>
     </div>
