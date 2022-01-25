@@ -13,12 +13,14 @@ import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
+import com.farmporter.myapp.model.AuthInfo;
 import com.farmporter.myapp.model.UserVO;
 
 
 @Repository
 public class UserRepository implements IUserRepository{
    
+	
    @Autowired
    JdbcTemplate jdbcTemplate;
    
@@ -113,4 +115,14 @@ public class UserRepository implements IUserRepository{
      user.getName(), user.getUserId(), user.getEmail(),
      user.getBirthDate(), user.getPassword()); 
      }
+
+
+	@Override
+	public AuthInfo authenticate(String userId, String password) {
+		return new AuthInfo(userId, password);
+	}
+
+
+     
+
 }

@@ -10,9 +10,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
+import com.farmporter.myapp.model.AuthInfo;
 import com.farmporter.myapp.model.UserVO;
 import com.farmporter.myapp.service.IUserService;
-
 
 @Controller
 public class UserController{
@@ -57,7 +57,6 @@ public class UserController{
     @RequestMapping(value= {"/loan_settle_cost"})
     public String loanSettleCost(Model model) {return "loan_settle_cost";}
     
-	
 	@RequestMapping(value= {"/login"})
 	public String logIn(Model model) {
 		return "login";
@@ -87,8 +86,11 @@ public class UserController{
     public String loginCheck(@RequestParam String userid, @RequestParam String password, Model model, HttpServletRequest request){
        HttpSession session = request.getSession();
        UserVO user = userService.getUserCheck(userid, password);
-      if(userid.equals(user.getUserId()) && password.equals(user.getPassword())) {          
-          return "redirect:my_page";   
+       
+      if(userid.equals(user.getUserId()) && password.equals(user.getPassword())) {
+    	  AuthInfo authInfo = userService.authenticate(user.getUserId(), user.getPassword());
+    	  session.setAttribute("authInfo", authInfo);
+    	  return "redirect:main_page";
        }
         return "redirect:login_fail";
     }
@@ -99,7 +101,11 @@ public class UserController{
       return "redirect:main_page";
    }
    
-	
+   @RequestMapping("/logout")
+   public String logout(HttpSession session) {
+       session.invalidate();
+       return "redirect:main_page";
+   }
 	
 /*	@ExceptionHandler({RuntimeException.class})
 	public ModelAndView runtimeException(HttpServletRequest request, Exception ex) {

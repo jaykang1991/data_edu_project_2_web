@@ -5,6 +5,7 @@ package com.farmporter.myapp.dao;
 import java.util.List;
 import java.util.Map;
 
+import com.farmporter.myapp.model.AuthInfo;
 import com.farmporter.myapp.model.UserVO;
 
 
@@ -26,7 +27,7 @@ public interface IUserRepository {
    
    /* 회원 정보 업데이트 */
    void updateUser(UserVO user);
-
+   AuthInfo authenticate(String userId, String password);
    
 
    }

@@ -11,6 +11,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.farmporter.myapp.dao.IUserRepository;
+import com.farmporter.myapp.model.AuthInfo;
 import com.farmporter.myapp.model.UserVO;
 
 @Service
@@ -59,5 +60,14 @@ public class UserService implements IUserService {
    public void updateUser(UserVO user) {
       userRepository.updateUser(user);
    }
+
+	@Override
+	public AuthInfo authenticate(String userId, String password) {
+		// TODO Auto-generated method stub
+		return userRepository.authenticate(userId, password);
+	}
+   
+   
+
       
 }

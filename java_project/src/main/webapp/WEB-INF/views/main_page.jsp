@@ -12,10 +12,7 @@
     <link href="<c:url value="/resources/img/fruit/apple.jpg" />" type = "image/png" sizes = "32x32" rel="icon">
     <link href="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet">
     <link href="<c:url value="/resources/css/main_side_1.css" />" rel="stylesheet">
-	<style type="text/css">
-          #before{display: none;}
-          #after{display:none;}
-    </style>
+
 </head>
 <body>
   <header>
@@ -51,19 +48,22 @@
             </li>
           </ul>
          </div> 
-
+		<c:if test="${empty authInfo}">
 		<div id="before" class = "login">
          		<ul class="nav navbar-nav navbar-right">
            		<li><a href="/myapp/login">로그인</a></li>
            		<li><a href="/myapp/agreement">회원가입</a></li>
            	</ul>
           </div>
+          </c:if>
+          <c:if test="${! empty authInfo}">
           <div id="after" class = "login">
          		<ul class="nav navbar-nav navbar-right">
-	            <li><a href="/myapp/login">로그아웃</a></li>
+	            <li><a href="logout">로그아웃</a></li>
 	            <li><a href="/myapp/my_page">My page</a></li>
 	        </ul>
           </div>
+          </c:if>
         </div>
       </div>
     </div>
