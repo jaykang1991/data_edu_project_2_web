@@ -62,6 +62,10 @@ public class UserController{
 	public String logIn(Model model) {
 		return "login";
 	}
+	@RequestMapping(value= {"/login_fail"})
+	public String logInFail(Model model) {
+		return "login_fail";
+	}
 	
 	@RequestMapping(value= {"/my_page"})
 	public String myPage(Model model) {
@@ -86,7 +90,7 @@ public class UserController{
       if(userid.equals(user.getUserId()) && password.equals(user.getPassword())) {          
           return "redirect:my_page";   
        }
-        return "redirect:login";
+        return "redirect:login_fail";
     }
     
    @RequestMapping(value= "/signup", method=RequestMethod.POST)

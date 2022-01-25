@@ -4,16 +4,13 @@
     
 <!DOCTYPE html>
 <html lang="ko">
-      <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="<c:url value= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>" rel="stylesheet"> 
-		<link href="<c:url value= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"/> "rel="stylesheet"> 
-		<link href= "<c:url value= "/resources/css/my_page.css"/>" rel="stylesheet"> 
-		<link href="<c:url value= "https://use.fontawesome.com/releases/v5.15.4/css/all.css" />"  rel="stylesheet"> 
-		
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>		  
+<head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	  <link href="<c:url value= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css"/>" rel="stylesheet"> 
+	  <link href="<c:url value= "https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css"/> "rel="stylesheet"> 		
+	  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>		  
 		<script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
         <script src="/resources/js/my_page.js"></script>
             
@@ -21,6 +18,223 @@
 		<style type="text/css">
 	          #before{display: none;}
 	          #after{display:none;}
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+/* 드롭다운 바 */
+header{
+  background-color: #F9FDCC;
+  width: 100% !important;
+}
+.navbar {
+  background-color: #F9FDCC;
+}
+/* 메뉴 */
+div.menu{
+  align-items: center;
+  margin-right: auto;
+  margin-left: 40%;
+  font-size: 18px;
+  font-weight: bold;
+}  
+/* 로고 */
+.navbar-brand{
+  font-size: 30px;
+  font-style : italic;
+  margin: 20px;
+  font-weight: bold;
+}
+/* 로그인, 회원가입*/
+#bs-example-navbar-collapse-1{
+  margin-top: 20px;
+}
+.dropdown{
+  color: #2F4858;
+}
+
+.dropdown-toggle{
+  color: #2F4858;
+}
+.menu_item {
+  margin: 10 px;
+  padding: 10px;
+  width: 20 px;
+} 
+
+section{
+  float: left;
+  width: 82%;
+  height: auto;
+  margin-top: 5%;
+  margin-left: 8%;
+}
+
+footer {
+  background-color: #F2F3CC;
+  height: 120px;
+  text-align: center;
+  padding: 45px;
+  position: relative;
+  clear: both;
+}
+
+.jumbotron {
+  max-width: 600px;	
+  margin: auto;	
+  margin-bottom: 20px;
+  border-radius: 30px;
+  height: 100px;
+  padding: 50px 70px;
+  text-align: center;
+  background-color: #ffffff;
+}
+
+.jumbotron h1 {
+  margin-top: -15px;
+  font-weight: 800;
+  align-items: center;
+  text-align: center;
+  font-size: 32px;
+}
+
+/* Related with Form */
+
+/* BASIC */
+body {
+  font-family: "Nanum Gothic", sans-serif;
+  height: 100vh;  
+  background-color: #eee6c4;
+}
+
+.registration-form{
+  padding-top: 0;
+  padding-bottom: 50px;
+  margin: 0;
+  align-items: center;
+  text-align: center;
+}
+
+.registration-form form{
+  background-color: #fff;
+  max-width: 800px;
+  margin: auto;  
+  padding: 50px 70px;
+  border-radius: 30px; 
+}
+
+.registration-form .item{  
+  margin-bottom: 25px; 
+  width: 100%;
+  height: 34px;
+  padding: 6px 12px;
+  font-size: 14px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+
+.registration-form .pw{    
+  margin-bottom: 25px; 
+  width: 75%;
+  position: relative;
+  display: inline-block;
+  height: 34px;
+  padding: 6px 12px;
+  margin-right: 7%;
+  font-size: 14px;
+  line-height: 1.42857143;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+}
+
+.btn .btn-primary {  
+  align-items: center;
+  background-color: #56baed;    
+  border: none;
+  color: white;
+  padding: 8px 30px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 13px;
+  border-radius: 5px 5px 5px 5px;
+  margin: 10px 10px 10px 100px;
+  width: 30%;
+  display: inline-block;
+}
+
+.registration-form .a{
+  margin-bottom: 25px;
+  bottom: auto;  
+}
+
+
+
+.registration-form .create-account{
+  border-radius: 30px;
+  padding: 10px 20px;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #56baed;
+  border: none;
+  color: white;
+  margin-top: 20px;
+}
+
+@media (max-width: 576px) {   
+  .registration-form .item{  
+    margin-bottom: 25px; 
+    width:auto;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+  }
+
+  .registration-form .pw{    
+    margin-bottom: 25px; 
+    width: 75%;
+    position: relative;
+    display: inline-block;
+    height: 34px;
+    padding: 6px 12px;
+    margin-right: 7%;
+    font-size: 14px;
+    line-height: 1.42857143;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+  }
+
+  .btn .btn-primary {  
+    align-items: center;
+    background-color: #56baed;    
+    border: none;
+    color: white;
+    padding: 8px 30px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 13px;
+    border-radius: 5px 5px 5px 5px;
+    margin: 10px 10px 10px 100px;
+  }
+  
+  .registration-form form{
+      padding: 50px 20px;
+      float: left;
+      display: block;
+  }
+
+  .registration-form .form-icon{
+      width: 70px;
+      height: 70px;
+      font-size: 30px;
+      line-height: 70px;
+  }
+}
 	    </style>
 </head>
 <body>
@@ -76,7 +290,7 @@
   </header>
 <!-- 메인메뉴 -->
 <section>
-  <div class="jumbotron ">
+  <div class="jumbotron">
     <h1 class="display-4"> My page</h1>
   </div>   
 
@@ -89,10 +303,8 @@
         <input type="text" class="form-control item" id="username" placeholder="이름">
       </div>         
       <div class="form-group password">
-        
-          <input type="password" class="form-control pw" id="password" placeholder="비밀번호">        
-          <a href="#" data-toggle="modal" data-target="#squarespaceModal-pw"><button type="submit" class="btn btn-primary">비밀번호 수정</button></a>
-        
+        <input type="password" class="form-control pw" id="password" placeholder="비밀번호">        
+        <a href="#" data-toggle="modal" data-target="#squarespaceModal-pw"><button type="submit" class="btn btn-primary">비밀번호 수정</button></a>
       </div>
       <div class="form-group">
         <input type="text" class="form-control item" id="email" placeholder="이메일">
@@ -192,7 +404,10 @@
 </footer>
 
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
 </body>
 </html>
