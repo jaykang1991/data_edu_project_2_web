@@ -13,5 +13,5 @@ public interface INoticeRepository {
 	List<NoticeVO>getNoticeList();
 
 	NoticeVO getNoticeInfo(int noticeNo);
-
+	void insertNotice(NoticeVO notice);
 	}

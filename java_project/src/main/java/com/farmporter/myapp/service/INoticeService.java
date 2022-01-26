@@ -9,4 +9,7 @@ public interface INoticeService {
 	List<NoticeVO> getNoticeList();
 
 	NoticeVO getNoticeInfo(int noticeNo);
+	
+	void insertNotice(NoticeVO notice);
+
 }

@@ -8,6 +8,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
 
 import com.farmporter.myapp.model.NoticeVO;
 import com.farmporter.myapp.service.INoticeService;
@@ -31,6 +32,16 @@ public class NoticeController{
 		NoticeVO notice = NoticeService.getNoticeInfo(noticeNo);
 		model.addAttribute("notice",notice);
 		return "notice_page";
+	}
+	
+	@RequestMapping(value= "/notice_input", method=RequestMethod.GET)
+	public String insertNotice(Model model) {
+		return "/notice_input";
+	}
+	@RequestMapping(value= "/notice_input", method=RequestMethod.POST)
+	public String insertNotice(NoticeVO notice, Model model) {
+		NoticeService.insertNotice(notice);
+		return "redirect:./notice";
 	}
 	
 }

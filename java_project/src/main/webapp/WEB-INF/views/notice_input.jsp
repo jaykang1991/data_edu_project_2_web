@@ -8,17 +8,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>공지사항</title>
+    <title>공지사항 등록하기</title>
     <link href="<c:url value="/resources/img/fruit/apple.jpg" />" type = "image/png" sizes = "32x32" rel="icon">
     <link href="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet">
     <link href="<c:url value="/resources/css/main_side_1.css" />" rel="stylesheet">
     <link href="<c:url value="/resources/css/table.css" />" rel="stylesheet">
 
-	<style type="text/css">
-          #before{display: none;}
-          #after{display:none;}
-    </style>
+
 </head>
+
+
 <body>
   <header>
     <div class="navbar navbar-default">
@@ -45,6 +44,7 @@
                 <li><a href="/myapp/farmer_profit">자금정보</a></li>
               </ul>
               <li class="nav"><a href="/myapp/farm_sites">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
+            
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
               <ul class="dropdown-menu" role="menu">
@@ -52,20 +52,14 @@
               </ul>
             </li>
           </ul>
-         </div> 
+         </div>
 
-		<div id="before" class = "login">
-         		<ul class="nav navbar-nav navbar-right">
-           		<li><a href="/myapp/login">로그인</a></li>
-           		<li><a href="/myapp/agreement">회원가입</a></li>
-           	</ul>
-          </div>
-          <div id="after" class = "login">
-         		<ul class="nav navbar-nav navbar-right">
-	            <li><a href="/myapp/login">로그아웃</a></li>
-	            <li><a href="/myapp/my_page">My page</a></li>
-	        </ul>
-          </div>
+         <div class = "login">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/myapp/login/login">로그인</a></li>
+            <li><a href="/myapp/login/agreement">회원가입</a></li>
+          </ul>
+         </div>
         </div>
       </div>
     </div>
@@ -92,39 +86,64 @@
   </div>
 </div>
 </nav>
-<!-- 좌측 네비바 -->
-
-
-<!-- 메인메뉴 -->
 <section >
-  <h3>공지사항</h3>
-
-    
-    <table class="table table table-bordered results">
-      <thead style="height: 50px;">
-        <tr>
-            <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">제목</th>
-            <th class="col-md-5 col-xs-5" colspan="5" style="vertical-align: middle;"> ${notice.title}</th>
-        </tr>
-    </thead>
-      <tbody>
+  <h3>공지사항 등록하기</h3>
+  
+  <!-- 테이블 -->
+  
+<form action="./notice_input" method="post">
+	
+  <table class="table table-bordered" style="height: 500px">
+    <thead>
+   
       <tr>
-      <td class="success" style="height: 10%; vertical-align: middle; text-align:center;">작성자</td>
-          <td class="title" style="vertical-align: middle; padding-left:20px;">${notice.writer}</td>
-          <td class="success" style="vertical-align: middle; text-align:center;">등록일</td>
-          <td style="vertical-align: middle; padding-left:20px">${notice.regDate}</td>
-        </tr>
-        <tr style="height:300px">
-          <td class="number" style="vertical-align: middle; text-align:center;">내용</td>
-          <td colspan="3" style="padding: 2%;">${notice.content}</td>
-        </tr>
-   </tbody>
-    </table>
-    <button type="submit"class="btn btn-default" style="float:right"><a href="/myapp/notice">목록</a></button>
+        <th class="col-md-1 col-xs-1" style="vertical-align: middle; text-align:center;">제목</th>
+       <th class="col-md-5 col-xs-5" style="vertical-align: middle; text-align:center;">
+        <input type="text" name="title"required  Placeholder = "제목을 입력해 주세요."
+        style="border:0; width: 100%; height: 100%; outline: none;">
+ 
+       </th>
+      </tr>
+    </thead>
     
+    <tbody>
+      <tr>
+        <td style="vertical-align: middle; text-align:center;">내용</td>
+        <td>
+        
+        <textarea name="content"style="border:0; width: 100%; height:100%; outline: none; resize: none;"
+        Placeholder = "내용을 입력해 주세요."></textarea>
+        </td>
+      </tr>
+      <tr>
+      <td style="height:50px; vertical-align: middle; text-align:center;">작성자</td>
+      <td><input type="text" name="writer"  style="border:0; width:100%; height:100%; outline: none;" required
+      Placeholder = "작성자를 입력해 주세요."></td>
+      </tr>
+    </tbody>
+  </table>
+  	
+<tr>  
+  	<th>&nbsp;</th>
+  <td>
+  	<button type="submit"class="btn btn-default" style="float:left">
+        <a href="/myapp/notice">목록으로</a>
+    </button>  
+  	<input type="submit" value="저장" class="btn btn-default" style="float:right">
+    <input type="reset" value="초기화" class="btn btn-default" style="float:right">
+  </td>
+</tr>
+<input type="number" name="noticeNo"required Placeholder = "번호를 입력해 주세요.">
+</form>
+   <!-- 테이블 -->
     
-</section>    
+ 
+ 
+<!-- 메인메뉴 --> 
+</section>   
 
+
+    
 <footer>
   <p>(08787) 서울 관악구 남부순환로 1820 에그옐로우 14층 귀농귀촌 종합상담 : 1111-1111 시스템 문의 : 02-222-2222</p>
   <p>Copyright 2021 Farmporter. All rights reserved.</p>
@@ -135,7 +154,6 @@
 <script src="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"/>"></script>
 </body>
 </html>
-
   
 
 

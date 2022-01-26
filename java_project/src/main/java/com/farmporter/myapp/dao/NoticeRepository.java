@@ -27,6 +27,7 @@ public class NoticeRepository implements INoticeRepository {
 			notice.setNoticeNo(rs.getInt("noticeNo"));
 			notice.setUpdateDate(rs.getDate("updateDate"));
 			notice.setRegDate(rs.getDate("regDate"));
+			notice.setWriter(rs.getString("writer"));
 			return notice;
 		}
 	}
@@ -42,6 +43,7 @@ public class NoticeRepository implements INoticeRepository {
 				notice.setTitle(rs.getString("TITLE"));
 				notice.setContent(rs.getString("CONTENT"));
 				notice.setUserId_2(rs.getString("USERID_2"));
+				notice.setWriter(rs.getString("WRITER"));
 				notice.setRegDate(rs.getDate("REGDATE"));
 				notice.setUpdateDate(rs.getDate("UPDATEDATE"));
 				return notice;
@@ -49,12 +51,21 @@ public class NoticeRepository implements INoticeRepository {
 		});
 	}
 	@Override
-	public NoticeVO getNoticeInfo(int noticeNo) {
-		String sql = "select noticeNo, title, content, userId_2, regdate, updatedate from notice where noticeNo=?";
-		return jdbcTemplate.queryForObject(sql, new NoticeMapper(), noticeNo);
-
+	   public NoticeVO getNoticeInfo(int noticeNo) {
+	      String sql = "select noticeNo, title, content, userid_2, regdate, updatedate, writer from notice where noticeNo=?";
+	      return jdbcTemplate.queryForObject(sql, new NoticeMapper(), noticeNo);
+	   }
+	
+	@Override
+	public void insertNotice(NoticeVO notice) {
+		String sql = "insert into notice (title, content, noticeNo, writer)"
+					+ " values(?,?,?,?)";
+		jdbcTemplate.update(sql, 
+				notice.getTitle(),
+				notice.getContent(),
+				notice.getNoticeNo(),
+				notice.getWriter());
 	}
-
 		
 
 }

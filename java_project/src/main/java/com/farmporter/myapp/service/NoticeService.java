@@ -22,4 +22,10 @@ public class NoticeService implements INoticeService {
 	public NoticeVO getNoticeInfo(int noticeNo) {
 		return NoticeRepository.getNoticeInfo(noticeNo);
 	}
+	
+	@Override
+	public void insertNotice(NoticeVO notice) {
+		NoticeRepository.insertNotice(notice);	
+	}
+	
 }

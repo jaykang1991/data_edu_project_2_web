@@ -116,7 +116,7 @@
         <td class = "title" style="vertical-align: middle; text-align:center;">
             <a href="/myapp/notice/${notice.noticeNo}/">${notice.title}</a>
         </td>
-        <td style = "vertical-align: middle; text-align:center;">${notice.userId_2}</td>
+        <td style = "vertical-align: middle; text-align:center;">${notice.writer}</td>
         <td style = "vertical-align: middle; text-align:center;">${notice.regDate}</td>
       </tr>
 
@@ -124,6 +124,10 @@
       </c:forEach>
     </tbody>
   </table>
+  
+  <button type="submit"class="btn btn-default" style="float: right;">
+    <a href= "/myapp/notice_input" style= "color: black;">글쓰기</a>
+  </button>
 <!-- 메인메뉴 -->
 
 <!-- 하단 네비게이션바 -->
@@ -135,7 +139,7 @@
           <span aria-hidden="true">&laquo;</span>
         </a>
         <a href="#" aria-label="Previous">
-          <span aria-hidden="true">	&lt;</span>
+          <span aria-hidden="true">   &lt;</span>
         </a>
       </li>
       <li class="active"><a href="#">1</a></li>
@@ -145,7 +149,7 @@
       <li class="disabled"><a href="#">5</a></li>
       <li>
         <a href="#" aria-label="Previous">
-          <span aria-hidden="true">	&gt;</span>
+          <span aria-hidden="true">   &gt;</span>
         </a>
         <a href="#" aria-label="Next">
           <span aria-hidden="true">&raquo;</span>
@@ -155,7 +159,7 @@
   </nav>    
         
     
-</section>    
+</section>        
 
 <footer>
   <p>(08787) 서울 관악구 남부순환로 1820 에그옐로우 14층 귀농귀촌 종합상담 : 1111-1111 시스템 문의 : 02-222-2222</p>
