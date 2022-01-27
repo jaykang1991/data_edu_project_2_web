@@ -9,10 +9,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8" />
     
-    <!-- script 연결  -->
     <script defer type="text/javascript"  src="<c:url value="/resources/js/agreement.js"/>"></script>
 
-    <!-- css 연결  -->
     <link href= "<c:url value= "/resources/css/agreement.css"/>" rel="stylesheet">
       
   </head>

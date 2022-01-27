@@ -16,14 +16,14 @@
 	height: auto;
 	padding: 50px 70px;
   text-align: center;
-  background-color: #F9FDCC;
+  background-color: #ffffff;
 }
 
 /* BASIC */
 body {
   font-family: "Nanum Gothic", sans-serif;
   height: 100vh;  
-  background-color: #ffffff;
+  background-color: #F9FDCC;
 }
 
 a {

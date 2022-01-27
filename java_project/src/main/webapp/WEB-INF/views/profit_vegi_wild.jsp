@@ -12,10 +12,7 @@
     <link href="<c:url value="/resources/img/fruit/apple.jpg" />" type = "image/png" sizes = "32x32" rel="icon">
     <link href="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet">
     <link href="<c:url value="/resources/css/main_side_1.css" />" rel="stylesheet">
-	<style type="text/css">
-          #before{display: none;}
-          #after{display:none;}
-    </style>
+
 </head>
 <body>
   <header>

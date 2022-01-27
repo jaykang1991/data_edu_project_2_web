@@ -21,10 +21,7 @@
     width: 60%;
   }
     </style>
-    <style type="text/css">
-          #before{display: none;}
-          #after{display:none;}
-    </style>
+    
 </head>
 <body>
   <header>

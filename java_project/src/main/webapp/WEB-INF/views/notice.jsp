@@ -13,10 +13,6 @@
     <link href="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet">
     <link href="<c:url value="/resources/css/main_side_1.css" />" rel="stylesheet">
     <link href="<c:url value="/resources/css/table.css" />" rel="stylesheet">
-	<style type="text/css">
-          #before{display: none;}
-          #after{display:none;}
-    </style>
 
 </head>
 <body>
@@ -134,10 +130,13 @@
       </c:forEach>
     </tbody>
   </table>
-  
-  <button type="submit"class="btn btn-default" style="float: right;">
-    <a href= "/myapp/notice_input" style= "color: black;">글쓰기</a>
-  </button>
+
+    <c:if test="${authInfo.id == 'admin'}">
+  		<button type="submit"class="btn btn-default" style="float: right;">
+    		<a href= "/myapp/notice_input" style= "color: black;">글쓰기</a>
+  		</button>
+    </c:if>
+    
 <!-- 메인메뉴 -->
 
 <!-- 하단 네비게이션바 -->
