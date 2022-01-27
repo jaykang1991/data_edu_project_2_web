@@ -75,7 +75,7 @@ public class UserController{
 		model.addAttribute("user",user);
 		return "my_page";
 	}
-	
+
 	@RequestMapping(value= {"/register"})
 	public String register(Model model) {
 		return "register";
