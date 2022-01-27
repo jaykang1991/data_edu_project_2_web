@@ -6,11 +6,13 @@ import javax.servlet.http.HttpSession;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import com.farmporter.myapp.model.AuthInfo;
+import com.farmporter.myapp.model.NoticeVO;
 import com.farmporter.myapp.model.UserVO;
 import com.farmporter.myapp.service.IUserService;
 
@@ -65,9 +67,12 @@ public class UserController{
 	public String logInFail(Model model) {
 		return "login_fail";
 	}
-	
-	@RequestMapping(value= {"/my_page"})
-	public String myPage(Model model) {
+
+	@RequestMapping(value= {"/my_page/{id}"})
+	public String myPage(@PathVariable String id, Model model) {
+		//String userId = authInfo.getId();
+		UserVO user = userService.getUserInfo(id);
+		model.addAttribute("user",user);
 		return "my_page";
 	}
 	

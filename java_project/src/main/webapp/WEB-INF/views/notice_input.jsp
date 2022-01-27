@@ -37,29 +37,44 @@
          <div class="menu">
           <ul class="nav navbar-nav">
             <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">소개</a>
+              <ul class="dropdown-menu" role="menu">
+                <li><a href="/myapp/intro">소개</a></li>
+              </ul>
+            </li>
+            <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">귀농 가이드</a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/myapp/profit_crop">소득정보</a></li>
                 <li><a href="/myapp/predict">가격정보</a></li>
                 <li><a href="/myapp/farmer_profit">자금정보</a></li>
               </ul>
-              <li class="nav"><a href="/myapp/farm_sites">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
-            
-            <li class="dropdown">
+             </li>
+             <li class="nav"><a href="/myapp/farm_sites">귀농 관련 사이트 <span class="sr-only">(current)</span></a></li>
+             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">알림소식</a>
               <ul class="dropdown-menu" role="menu">
                 <li><a href="/myapp/notice">공지사항</a></li>
               </ul>
-            </li>
+             </li>
           </ul>
-         </div>
-
-         <div class = "login">
-          <ul class="nav navbar-nav navbar-right">
-            <li><a href="/myapp/login/login">로그인</a></li>
-            <li><a href="/myapp/login/agreement">회원가입</a></li>
-          </ul>
-         </div>
+         </div> 
+		<c:if test="${empty authInfo}">
+		<div id="before" class = "login">
+         		<ul class="nav navbar-nav navbar-right">
+           		<li><a href="/myapp/login">로그인</a></li>
+           		<li><a href="/myapp/agreement">회원가입</a></li>
+           	</ul>
+          </div>
+          </c:if>
+          <c:if test="${! empty authInfo}">
+          <div id="after" class = "login">
+         		<ul class="nav navbar-nav navbar-right">
+	            <li><a href="logout">로그아웃</a></li>
+	            <li><a href="/myapp/my_page/${authInfo.id}">My page</a></li>
+	        </ul>
+          </div>
+          </c:if>
         </div>
       </div>
     </div>
