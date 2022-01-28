@@ -148,7 +148,6 @@
     <input type="reset" value="초기화" class="btn btn-default" style="float:right">
   </td>
 </tr>
-<input type="number" name="noticeNo"required Placeholder = "번호를 입력해 주세요.">
 </form>
    <!-- 테이블 -->
     

@@ -58,13 +58,18 @@ public class NoticeRepository implements INoticeRepository {
 	
 	@Override
 	public void insertNotice(NoticeVO notice) {
-		String sql = "insert into notice (title, content, noticeNo, writer)"
-					+ " values(?,?,?,?)";
+		String sql = "insert into notice (noticeNo, title, content, writer)"
+					+ " values(SEQ.nextval,?,?,?)";
 		jdbcTemplate.update(sql, 
 				notice.getTitle(),
 				notice.getContent(),
-				notice.getNoticeNo(),
 				notice.getWriter());
+	}
+	
+	@Override
+	public void deleteNotice(int noticeNo) {
+		String sql = "delete from notice where noticeNo=?";
+		jdbcTemplate.update(sql, noticeNo);
 	}
 		
 

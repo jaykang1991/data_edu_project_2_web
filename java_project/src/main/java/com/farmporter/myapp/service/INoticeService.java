@@ -11,5 +11,7 @@ public interface INoticeService {
 	NoticeVO getNoticeInfo(int noticeNo);
 	
 	void insertNotice(NoticeVO notice);
+	
+	void deleteNotice(int noticeNo);
 
 }

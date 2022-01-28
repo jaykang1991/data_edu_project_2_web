@@ -28,4 +28,8 @@ public class NoticeService implements INoticeService {
 		NoticeRepository.insertNotice(notice);	
 	}
 	
+   @Override
+   public void deleteNotice(int noticeNo) {
+	   NoticeRepository.deleteNotice(noticeNo);
+   }
 }

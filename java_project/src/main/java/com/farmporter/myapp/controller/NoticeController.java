@@ -38,9 +38,16 @@ public class NoticeController{
 	public String insertNotice(Model model) {
 		return "/notice_input";
 	}
+	
 	@RequestMapping(value= "/notice_input", method=RequestMethod.POST)
 	public String insertNotice(NoticeVO notice, Model model) {
 		NoticeService.insertNotice(notice);
+		return "redirect:./notice";
+	}
+	
+	@RequestMapping(value= "/notice_delete", method=RequestMethod.POST)
+	public String deleteNotice(int noticeNo, Model model) {
+		NoticeService.deleteNotice(noticeNo);
 		return "redirect:./notice";
 	}
 	

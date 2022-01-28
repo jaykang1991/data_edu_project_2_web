@@ -129,6 +129,13 @@
     </table>
     <button type="submit"class="btn btn-default" style="float:right"><a href="/myapp/notice">목록</a></button>
     
+    <c:if test="${authInfo.id == 'admin'}">
+	    <form action="/myapp/notice_delete" method="post">
+			<input type="hidden" name="noticeNo" value="${notice.noticeNo}">
+			<input type="submit" value="삭제">
+		</form>  
+    </c:if>
+	  
     
 </section>    
 
