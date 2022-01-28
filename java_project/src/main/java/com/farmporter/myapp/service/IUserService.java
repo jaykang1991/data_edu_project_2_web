@@ -6,12 +6,11 @@ import java.util.List;
 import java.util.Map;
 
 import com.farmporter.myapp.model.AuthInfo;
+import com.farmporter.myapp.model.SignUpVO;
 import com.farmporter.myapp.model.UserVO;
 
 
 public interface IUserService {
-   /* 회원가입 */
-   void insertUser(UserVO user);
    
    /* 회원 정보 조회 (아이디로) */
    UserVO getUserInfo(String userId);
@@ -24,6 +23,9 @@ public interface IUserService {
    
    /* 가입한 회원 리스트 조회 */
    List<UserVO> getUserList();
+   
+   /* 회원가입(SignUpVO) */
+   void insertUser(SignUpVO signup);
    
    /* 회원 정보 업데이트 */
    void updateUser(UserVO user);

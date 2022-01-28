@@ -2,16 +2,20 @@
 
 package com.farmporter.myapp.service;
 
+import java.security.InvalidParameterException;
 import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DuplicateKeyException;
+import org.springframework.jdbc.UncategorizedSQLException;
 import org.springframework.stereotype.Service;
 
 import com.farmporter.myapp.dao.IUserRepository;
 import com.farmporter.myapp.model.AuthInfo;
+import com.farmporter.myapp.model.SignUpVO;
 import com.farmporter.myapp.model.UserVO;
 
 @Service
@@ -20,11 +24,6 @@ public class UserService implements IUserService {
    @Autowired
    IUserRepository userRepository;
    
-   /* 회원가입 */
-   @Override
-   public void insertUser(UserVO user) {
-      userRepository.insertUser(user);
-   }   
    /* 회원 정보 조회 (아이디로) */
    @Override
     public UserVO getUserInfo(String userid) { 
@@ -53,6 +52,20 @@ public class UserService implements IUserService {
    @Override
    public List<UserVO> getUserList() {
       return userRepository.getUserList();
+   }
+   
+   /* 회원가입(SignUpVO) */
+   @Override
+   public void insertUser(SignUpVO signup) throws UncategorizedSQLException, DuplicateKeyException {
+      // 비밀번호 유효성 검사 
+      if(!signup.getPassword().equals(signup.getPasswordCheck())) {
+         throw new InvalidParameterException();
+      }
+      try {
+         userRepository.insertUser(signup);
+      } catch(Exception e) {
+         e.printStackTrace();
+      }
    }
    
    /* 회원 정보 업데이트 */

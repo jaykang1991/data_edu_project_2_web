@@ -14,6 +14,7 @@ import org.springframework.jdbc.core.RowMapper;
 import org.springframework.stereotype.Repository;
 
 import com.farmporter.myapp.model.AuthInfo;
+import com.farmporter.myapp.model.SignUpVO;
 import com.farmporter.myapp.model.UserVO;
 
 
@@ -50,18 +51,19 @@ public class UserRepository implements IUserRepository{
       }
    }
    
+   
    /* 회원가입 */
    @Override
-   public void insertUser(UserVO user) {
-      String sql = "insert into farm_user (user_id, name, password,"
+   public void insertUser(SignUpVO signup) {
+      String sql = "insert into farm_user (userid, name, password,"
             + "birthdate, email)"
             + "values(?,?,?,?,?)";
-      jdbcTemplate.update(sql,
-            user.getUserId(),
-            user.getName(),
-            user.getPassword(),
-            user.getBirthDate(),
-            user.getEmail());
+      int result = jdbcTemplate.update(sql,
+            signup.getUserId(),
+            signup.getName(),
+            signup.getPassword(),
+            signup.getBirthDate(),
+            signup.getEmail());
    }
    
    /* 회원 정보 조회 (아이디로) */
@@ -109,11 +111,11 @@ public class UserRepository implements IUserRepository{
    /* 회원 정보 업데이트 */
      @Override
      public void updateUser(UserVO user) { String sql =
-     "update farm_user " +" set name=?, userid=?, email=?," +
-     "birthdate=?, password=?"; 
+     "update farm_user " +" set name=?, email=?," +
+     "birthdate=?, password=? where userid=?"; 
      jdbcTemplate.update(sql,
-     user.getName(), user.getUserId(), user.getEmail(),
-     user.getBirthDate(), user.getPassword()); 
+     user.getName(), user.getEmail(),
+     user.getBirthDate(), user.getPassword(), user.getUserId()); 
      }
 
 

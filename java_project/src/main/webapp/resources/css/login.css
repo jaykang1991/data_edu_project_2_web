@@ -60,7 +60,7 @@ h2 {
 
 #formContent {
   border-radius: 10px 10px 10px 10px;
-  background: #F9FDCC;
+  background: #ffffff;
   padding: 30px;
   width: 90%;
   max-width: 450px;
@@ -70,7 +70,7 @@ h2 {
 }
 
 #formFooter {
-  background-color: #F9FDCC;
+  background-color: #ffffff;
   border-top: 1px solid #dce8f1;
   padding: 25px;
   text-align: center;

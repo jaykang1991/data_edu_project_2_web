@@ -8,7 +8,7 @@
       <meta charset="UTF-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Page</title>
+    <title>회원 정보 수정</title>
     <link href="<c:url value="/resources/img/fruit/apple.jpg" />" type = "image/png" sizes = "32x32" rel="icon">
     <link href="<c:url value="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" />" rel="stylesheet">
     <link href="<c:url value="/resources/css/main_side_1.css" />" rel="stylesheet">
@@ -80,34 +80,43 @@
   </header>
 <!-- 메인메뉴 -->
 <section >
-  <h3 style="margin-left:15%">My Page</h3>
+  <h3 style="margin-left:15%">회원 정보 수정</h3>
 
 
   <!-- 테이블 -->
+  <form action="./my_page_edit_submit" method="post">
+  
   <table class="table table-bordered" style="margin-top:15%; width: 80%; margin-left:15%;">
 
       <tr>
         <th class="col-md-1 col-xs-1" style="vertical-align: middle;">성명</th>
-        <td class="col-md-5 col-xs-5" style="vertical-align: middle;">${user.name}</td>
+        <td class="col-md-5 col-xs-5" style="vertical-align: middle;">
+          <input type='text' name="name" placeholder="성명" disabled style="width: 25%; height: 80%; padding-left:2%">
+        </td>
       </tr> 
       <tr>
-        <th style="vertical-align: middle; text-align:center;">아이디</th>
-        <td class="col-md-5 col-xs-5" style="vertical-align: middle;">${user.userId}</td>
+        <th style="vertical-align: middle; text-align:center;">비밀번호</th>
+        <td class="col-md-5 col-xs-5" style="vertical-align: middle;">
+          <input type='password'name="password" placeholder="비밀번호" disabled style="width: 25%; height: 80%; padding-left:2%">
+        </td>
       </tr>
       <tr>
         <th style="vertical-align: middle; text-align:center;">생년월일</th>
-        <td class="col-md-5 col-xs-5" style="vertical-align: middle;">${user.birthDate}</td>
+        <td class="col-md-5 col-xs-5" style="vertical-align: middle;">
+          <input type='date' id="birthdate" name="birthDate" placeholder="생년월일" disabled style="width: 25%; height: 80%; padding-left:2%">
+        </td>
       </tr>
       <tr>
         <th style="vertical-align: middle; text-align:center;">이메일</th>
-        <td class="col-md-5 col-xs-5" style="vertical-align: middle;">${user.email}</td>
+        <td class="col-md-5 col-xs-5" style="vertical-align: middle;">
+          <input type='text' name="email" placeholder="이메일" disabled style="width: 25%; height: 80%; padding-left:2%">
+        </td>
       </tr>
     </table>
     
-    <button type="button" class="btn btn-default btn-lg" style="background-color:#212121; color:white; float:right; margin-bottom: 15%; margin-right: 5%;">
-      <a href="/myapp/my_page_edit/${authInfo.id}" style="color: white;">회원 정보 수정</button></a>
-    </button>
-</section>   
+      <input type="submit" value="수정" class="btn btn-default" style="color: white; float:right;">
+</form>    
+</section>
 
 
 <footer>

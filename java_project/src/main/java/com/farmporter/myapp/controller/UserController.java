@@ -1,5 +1,8 @@
 package com.farmporter.myapp.controller;
 
+import java.security.InvalidParameterException;
+import java.sql.SQLIntegrityConstraintViolationException;
+
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
 
@@ -10,9 +13,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.servlet.ModelAndView;
 
 import com.farmporter.myapp.model.AuthInfo;
 import com.farmporter.myapp.model.NoticeVO;
+import com.farmporter.myapp.model.SignUpVO;
 import com.farmporter.myapp.model.UserVO;
 import com.farmporter.myapp.service.IUserService;
 
@@ -75,11 +80,41 @@ public class UserController{
 		model.addAttribute("user",user);
 		return "my_page";
 	}
+	
+	@RequestMapping(value= {"/my_page_edit/{id}"})
+	public String myPageEdit(@PathVariable String id, Model model) {
+		UserVO user = userService.getUserInfo(id);
+		model.addAttribute("user",user);
+		return "my_page_edit";
+	}
+	
+	@RequestMapping(value= "/my_page_edit_submit", method=RequestMethod.POST)
+	public String myPageEditSubmit(@PathVariable UserVO user, Model model) {
+		userService.updateUser(user);
+		UserVO user_updated = userService.getUserInfo(user.getUserId());
+		model.addAttribute("user",user_updated);
+		return "my_page";
+	}
 
 	@RequestMapping(value= {"/register"})
 	public String register(Model model) {
 		return "register";
 	}
+	
+/* 회원가입 */    
+   @RequestMapping(value= "/signup", method=RequestMethod.POST)
+   public ModelAndView insertUser(SignUpVO user, Model model) throws SQLIntegrityConstraintViolationException {
+      ModelAndView mv = new ModelAndView();
+      try {
+         userService.insertUser(user);
+         mv.addObject("result", true);
+         mv.setViewName("redirect:login");
+       } catch(InvalidParameterException e) {   
+          mv.addObject("result", false);      
+          mv.setViewName("redirect:register");
+       } 
+      return mv;
+   }
 	
 	@RequestMapping(value= {"/agreement"})
 	public String agreement(Model model) {
@@ -100,11 +135,6 @@ public class UserController{
         return "redirect:login_fail";
     }
     
-   @RequestMapping(value= "/signup", method=RequestMethod.POST)
-   public String insertUser(UserVO user, Model model) {
-      userService.insertUser(user);
-      return "redirect:main_page";
-   }
    
    @RequestMapping("/logout")
    public String logout(HttpSession session) {
